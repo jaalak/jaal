@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;family=Space+Grotesk:wght@500;700&amp;family=Space+Mono:ital,wght@0,400;0,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container-high": "#ebe8df", "surface-tint": "#4e6700", "surface-variant": "#e5e2da", "on-primary": "#ffffff", "secondary": "#b3006e", "on-secondary": "#ffffff", "background": "#fcf9f0", "outline-variant": "#c3caac", "on-error-container": "#93000a", "outline": "#747a60", "surface-container-highest": "#e5e2da", "surface-container": "#f1eee5", "on-secondary-container": "#fffbff", "on-tertiary-fixed-variant": "#002ccd", "secondary-fixed-dim": "#ffb0ce", "on-tertiary-container": "#3856fa", "on-primary-fixed-variant": "#3a4d00", "primary": "#4e6700", "primary-fixed-dim": "#a6d700", "surface": "#fcf9f0", "tertiary-fixed": "#dee0ff", "tertiary-fixed-dim": "#bbc3ff", "surface-bright": "#fcf9f0", "inverse-on-surface": "#f4f1e8", "primary-fixed": "#bef500", "on-tertiary-fixed": "#000f5d", "inverse-primary": "#a6d700", "tertiary-container": "#eaeaff", "on-secondary-fixed": "#3d0022", "on-surface": "#1c1c17", "inverse-surface": "#31312b", "on-surface-variant": "#434933", "on-background": "#1c1c17", "surface-dim": "#dddad1", "on-primary-fixed": "#151f00", "primary-container": "#c6ff00", "on-tertiary": "#ffffff", "on-error": "#ffffff", "surface-container-low": "#f6f3ea", "error-container": "#ffdad6", "tertiary": "#2848ee", "secondary-fixed": "#ffd9e5", "secondary-container": "#db1989", "surface-container-lowest": "#ffffff", "on-primary-container": "#587300", "on-secondary-fixed-variant": "#8c0055", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "0.75rem", "space-lg": "1.25rem", "margin": "1rem", "space-md": "0.75rem", "space-xl": "2rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, "fontFamily": { "body-sm": ["Space Grotesk"], "hand-note": ["Caveat"], "label-code-sm": ["Space Mono"], "headline-sm": ["Space Grotesk"], "display-xl": ["Space Grotesk"], "body-md": ["Space Grotesk"], "body-lg": ["Space Grotesk"], "display-xl-mobile": ["Space Grotesk"], "headline-md": ["Space Grotesk"], "headline-lg": ["Space Grotesk"], "label-code-lg": ["Space Mono"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "hand-note": ["22px", { "lineHeight": "24px", "fontWeight": "600" }], "label-code-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "400" }], "headline-sm": ["20px", { "lineHeight": "22px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "display-xl": ["56px", { "lineHeight": "54px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }], "body-lg": ["16px", { "lineHeight": "22px", "fontWeight": "500" }], "display-xl-mobile": ["40px", { "lineHeight": "40px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "headline-md": ["26px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg": ["36px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "label-code-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "700" }] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="back" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface rounded-DEFAULT hover:bg-surface-container-high transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><div class="flex flex-col"><h1 class="font-headline-sm text-headline-sm text-on-surface lowercase leading-none">Carry Pouch</h1><span class="font-label-code-sm text-label-code-sm text-outline lowercase leading-none mt-space-xs">jaal // mesh pocket</span></div></div><div class="flex items-center gap-space-sm"><div class="px-space-xs py-0.5 rounded-DEFAULT bg-surface-container flex items-center gap-1.5"><span class="material-symbols-outlined text-[15px] text-primary">inventory_2</span><span class="font-label-code-sm text-label-code-sm text-on-surface-variant lowercase">courier ready</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-background min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- TOP HEADER BLOCK -->
+<section class="px-margin pt-4 pb-2 relative flex flex-col gap-2">
+<!-- Masking Tape Scrap Top-Right -->
+<div class="absolute -top-1 right-8 w-24 h-6 bg-[#f9e27a]/90 rotate-[-4deg] z-20 pointer-events-none shadow-[2px_2px_0px_0px_#0A0A0A] flex items-center justify-center">
+<span class="font-label-code-sm text-[9px] uppercase tracking-widest text-[#0A0A0A]/70 select-none">pouch//v0.9b</span>
+</div>
+<!-- Main Title with Ultra-Blue Felt-Pen Highlight -->
+<div class="relative inline-flex items-center self-start mt-2">
+<div class="absolute -inset-x-2 -inset-y-1 bg-tertiary transform -skew-x-6 rotate-[-1deg] -z-0"></div>
+<h1 class="relative font-headline-lg text-headline-lg text-on-tertiary tracking-tight lowercase select-none">carry pouch</h1>
+</div>
+<!-- Subline Telemetry Banner -->
+<div class="flex items-center gap-1.5 font-label-code-sm text-label-code-sm text-on-surface uppercase tracking-wider font-bold">
+<span class="inline-block w-2 h-2 bg-primary-container border-2 border-[#0A0A0A] animate-pulse"></span>
+<span>sealed stranger packets in transit // zero cloud</span>
+</div>
+<!-- Reassurance Chip / Cutout Note -->
+<div class="relative bg-surface-container-high border-[3px] border-[#0A0A0A] p-2.5 shadow-[4px_4px_0px_0px_#0A0A0A] rotate-[0.5deg]">
+<!-- Tape piece left edge -->
+<div class="absolute -top-2 left-4 w-12 h-4 bg-[#f9e27a]/85 border border-[#0A0A0A]/40 rotate-[-6deg] pointer-events-none"></div>
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[20px] text-tertiary shrink-0 mt-0.5">verified_user</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-tight">
+          your phone carries encrypted envelopes for passersby. you cannot read them, sender is hidden, recipient is hidden.
+        </p>
+</div>
+<!-- Hand annotation note -->
+<div class="mt-1 text-right">
+<span class="font-hand-note text-hand-note text-tertiary select-none">★ zero liability by design! ➔</span>
+</div>
+</div>
+</section>
+<!-- SCOUT MERIT BADGES & COURIER CLOUT -->
+<section class="px-margin mt-4">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-code-lg text-label-code-lg uppercase tracking-wider text-on-surface bg-surface-container px-2 py-0.5 border-[2px] border-[#0A0A0A] shadow-[2px_2px_0px_0px_#0A0A0A]">
+        scout merit record
+      </span>
+<span class="font-label-code-sm text-label-code-sm text-outline">sash cert #8841-mesh</span>
+</div>
+<!-- Scout Sash / Cloth Card Container with Stitched Perforations -->
+<div class="relative bg-[#ebd9bf] border-[3px] border-[#0A0A0A] p-3 shadow-[6px_6px_0px_0px_#0A0A0A] rotate-[-0.8deg] overflow-hidden">
+<!-- Stitched Zigzag simulated background edge -->
+<div class="absolute inset-0 pointer-events-none border-[2px] border-dashed border-[#0A0A0A]/30 m-1"></div>
+<!-- Badge Row -->
+<div class="grid grid-cols-2 gap-3 relative z-10">
+<!-- BADGE 1: Circular Hot Pink Courier Raven Merit Badge -->
+<div class="relative bg-secondary p-3 border-[3px] border-[#0A0A0A] shadow-[3px_3px_0px_0px_#0A0A0A] flex flex-col items-center text-center transform rotate-[-1.5deg]">
+<!-- Top Yellow Ribbon Loop -->
+<div class="w-6 h-3 bg-primary-container border-[2px] border-[#0A0A0A] -mt-4 mb-1"></div>
+<!-- Embroidered Circular Border Patch -->
+<div class="w-24 h-24 rounded-full border-[3px] border-dashed border-primary-container bg-[#98005e] flex flex-col items-center justify-center p-1 relative shadow-inner">
+<!-- Arched Text Emulation -->
+<span class="font-label-code-sm text-[8px] tracking-tight uppercase text-primary-container font-bold leading-none mb-0.5">
+              courier scout
+            </span>
+<!-- Badge Raven/Winged backpack icon -->
+<div class="flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container text-[20px]" style="font-variation-settings: 'FILL' 1;">local_post_office</span>
+</div>
+<!-- Huge Merit Number -->
+<span class="font-display-xl text-[44px] leading-none text-primary-container font-extrabold -mt-1 select-none">
+              17
+            </span>
+<span class="font-label-code-sm text-[8px] uppercase tracking-tighter text-on-secondary font-bold leading-none mt-0.5">
+              deliveries
+            </span>
+</div>
+<span class="font-body-sm text-[12px] font-bold text-on-secondary uppercase mt-2 leading-tight">
+            mesh carrier badge
+          </span>
+<span class="font-label-code-sm text-[10px] text-secondary-fixed-dim leading-none mt-1">
+            verified physical handoffs
+          </span>
+</div>
+<!-- BADGE 2: Night Owl Courier Tier 03 -->
+<div class="relative bg-[#1c223a] text-on-tertiary p-3 border-[3px] border-[#0A0A0A] shadow-[3px_3px_0px_0px_#0A0A0A] flex flex-col items-center text-center transform rotate-[1.5deg]">
+<!-- Tape patch on top -->
+<div class="w-8 h-3 bg-[#f9e27a]/80 border border-[#0A0A0A] -mt-4 mb-1 rotate-3"></div>
+<!-- Patch Frame -->
+<div class="w-24 h-24 border-[3px] border-dashed border-[#ffd700] bg-[#121629] rounded-lg flex flex-col items-center justify-center p-1 relative shadow-inner">
+<div class="flex items-center gap-1 text-[#ffd700] mb-0.5">
+<span class="material-symbols-outlined text-[14px]">star</span>
+<span class="material-symbols-outlined text-[16px]">dark_mode</span>
+<span class="material-symbols-outlined text-[14px]">star</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-[#ffd700] font-black uppercase leading-none tracking-tight">
+              owl
+            </span>
+<span class="font-label-code-sm text-[9px] uppercase tracking-wider text-surface-variant font-bold mt-1">
+              tier 03
+            </span>
+<span class="font-label-code-sm text-[8px] text-[#ffd700] tracking-tight">
+              142 hops logged
+            </span>
+</div>
+<span class="font-body-sm text-[12px] font-bold text-surface-container-lowest uppercase mt-2 leading-tight">
+            rank: night owl
+          </span>
+<span class="font-label-code-sm text-[10px] text-tertiary-fixed-dim leading-none mt-1">
+            active on late-night transit
+          </span>
+</div>
+</div>
+<!-- Scout Honor Ribbon Sash Bar Below -->
+<div class="mt-3 bg-surface-container-lowest border-[2px] border-[#0A0A0A] px-2 py-1 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+<span class="font-label-code-sm text-[11px] font-bold uppercase tracking-wider text-[#0A0A0A]">honor courier · 0 dropped packets</span>
+</div>
+<span class="font-hand-note text-hand-note text-secondary -rotate-2 select-none">100% faithful</span>
+</div>
+</div>
+</section>
+<!-- KRAFT CANVAS MESSENGER BAG POUCH VISUAL (WITH 6 PEEKING ENVELOPES) -->
+<section class="px-margin mt-5">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">shopping_bag</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface lowercase">bag payload</h2>
+</div>
+<span class="font-label-code-sm text-label-code-sm bg-primary-container px-2 py-0.5 border border-[#0A0A0A] font-bold uppercase">
+        6 envelopes carried
+      </span>
+</div>
+<!-- CANVAS BAG ENCLOSURE -->
+<div class="relative bg-[#d9b382] border-[3px] border-[#0A0A0A] shadow-[6px_6px_0px_0px_#0A0A0A] pt-4 pb-4 px-3 overflow-hidden">
+<!-- Fabric Weave Overlay Grid -->
+<div class="absolute inset-0 pointer-events-none opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:8px_8px]"></div>
+<!-- Leather/Webbing Bag Straps & Heavy Brass Buckles -->
+<div class="flex justify-between items-center px-4 mb-2 relative z-10">
+<!-- Left Strap & Buckle -->
+<div class="w-8 flex flex-col items-center">
+<div class="w-5 h-8 bg-[#8a5d3b] border-[2px] border-[#0A0A0A] flex items-center justify-center">
+<div class="w-3 h-2 bg-[#ffd54f] border border-[#0A0A0A]"></div>
+</div>
+<div class="w-2 h-2 rounded-full bg-[#1c1c17] mt-0.5"></div>
+</div>
+<!-- Bag Flap Open Stamp -->
+<div class="border-[2px] border-dashed border-[#0A0A0A]/60 px-3 py-0.5 bg-[#f5e6d0]/80 rotate-[-2deg]">
+<span class="font-label-code-sm text-[10px] uppercase font-bold tracking-widest text-[#0A0A0A]">
+            pouch interior // store-and-forward pool
+          </span>
+</div>
+<!-- Right Strap & Buckle -->
+<div class="w-8 flex flex-col items-center">
+<div class="w-5 h-8 bg-[#8a5d3b] border-[2px] border-[#0A0A0A] flex items-center justify-center">
+<div class="w-3 h-2 bg-[#ffd54f] border border-[#0A0A0A]"></div>
+</div>
+<div class="w-2 h-2 rounded-full bg-[#1c1c17] mt-0.5"></div>
+</div>
+</div>
+<!-- Faded Privacy Stamp diagonally over the pouch payload -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-none -rotate-12 border-[3px] border-[#8a857a]/40 px-4 py-2 bg-[#fcf9f0]/60 backdrop-blur-[0.5px]">
+<p class="font-label-code-sm text-[10px] text-center uppercase tracking-widest font-black text-[#5a5750]">
+          ZERO METADATA · SENDER REDACTED<br/>CIPHER: XChaCha20-Poly1305
+        </p>
+</div>
+<!-- STACK OF 6 ENVELOPES PEEKING OUT (ORGANIC OFFSET FAN) -->
+<div class="flex flex-col gap-2.5 relative z-20">
+<!-- Envelope 1 -->
+<div class="relative bg-surface-container-lowest border-[3px] border-[#0A0A0A] shadow-[4px_4px_0px_0px_#0A0A0A] p-2.5 rotate-[-1deg] transition-transform active:translate-x-1 active:translate-y-1 cursor-pointer">
+<!-- Envelope Flap Triangle outline -->
+<div class="absolute top-0 right-0 w-8 h-8 pointer-events-none border-b-[2px] border-l-[2px] border-[#0A0A0A]/20 bg-[#efeae1]/50"></div>
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<!-- Hot pink wax seal -->
+<div class="w-8 h-8 rounded-full bg-secondary-container border-[2px] border-[#0A0A0A] flex items-center justify-center shadow-[2px_2px_0px_0px_#0A0A0A] shrink-0">
+<span class="material-symbols-outlined text-on-secondary text-[16px]">lock</span>
+</div>
+<div>
+<span class="font-label-code-lg text-label-code-lg text-on-surface">#a91f</span>
+<span class="font-label-code-sm text-label-code-sm text-outline ml-1.5">2.1 kb · 3 hops</span>
+</div>
+</div>
+<span class="font-label-code-sm text-[10px] bg-primary-container px-1.5 py-0.5 border border-[#0A0A0A] font-bold">
+              11d left
+            </span>
+</div>
+<div class="mt-1.5 pt-1 border-t border-dashed border-[#0A0A0A]/30 flex justify-between items-center">
+<span class="font-label-code-sm text-[10px] text-on-surface-variant">TO: ? [hint: 0x9f] // FROM: ?</span>
+<span class="font-hand-note text-[16px] text-tertiary">in your pocket!</span>
+</div>
+</div>
+<!-- Envelope 2 -->
+<div class="relative bg-surface-container-low border-[3px] border-[#0A0A0A] shadow-[4px_4px_0px_0px_#0A0A0A] p-2.5 rotate-[1.2deg] transition-transform active:translate-x-1 active:translate-y-1 cursor-pointer">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary border-[2px] border-[#0A0A0A] flex items-center justify-center shadow-[2px_2px_0px_0px_#0A0A0A] shrink-0">
+<span class="material-symbols-outlined text-on-secondary text-[16px]">fingerprint</span>
+</div>
+<div>
+<span class="font-label-code-lg text-label-code-lg text-on-surface">#4c02</span>
+<span class="font-label-code-sm text-label-code-sm text-outline ml-1.5">14.8 kb · 1 hop</span>
+</div>
+</div>
+<span class="font-label-code-sm text-[10px] bg-surface-variant px-1.5 py-0.5 border border-[#0A0A0A] font-bold">
+              8d left
+            </span>
+</div>
+<div class="mt-1.5 pt-1 border-t border-dashed border-[#0A0A0A]/30 flex justify-between items-center">
+<span class="font-label-code-sm text-[10px] text-on-surface-variant">TO: ? [hint: 0x02] // FROM: ?</span>
+<span class="font-label-code-sm text-[10px] text-secondary font-bold">picked up 2h ago</span>
+</div>
+</div>
+<!-- Envelope 3 -->
+<div class="relative bg-surface-container-lowest border-[3px] border-[#0A0A0A] shadow-[4px_4px_0px_0px_#0A0A0A] p-2.5 rotate-[-0.6deg] transition-transform active:translate-x-1 active:translate-y-1 cursor-pointer">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container border-[2px] border-[#0A0A0A] flex items-center justify-center shadow-[2px_2px_0px_0px_#0A0A0A] shrink-0">
+<span class="material-symbols-outlined text-on-secondary text-[16px]">mail</span>
+</div>
+<div>
+<span class="font-label-code-lg text-label-code-lg text-on-surface">#f71e</span>
+<span class="font-label-code-sm text-label-code-sm text-outline ml-1.5">512 b · 5 hops</span>
+</div>
+</div>
+<span class="font-label-code-sm text-[10px] bg-error-container text-on-error-container px-1.5 py-0.5 border border-[#0A0A0A] font-bold">
+              2d left (urgent)
+            </span>
+</div>
+<div class="mt-1.5 pt-1 border-t border-dashed border-[#0A0A0A]/30 flex justify-between items-center">
+<span class="font-label-code-sm text-[10px] text-on-surface-variant">TO: ? [hint: 0x1e] // FROM: ?</span>
+<span class="font-label-code-sm text-[10px] text-tertiary">ble direct priority</span>
+</div>
+</div>
+<!-- Envelope 4 -->
+<div class="relative bg-surface-container-low border-[3px] border-[#0A0A0A] shadow-[4px_4px_0px_0px_#0A0A0A] p-2.5 rotate-[1.5deg] transition-transform active:translate-x-1 active:translate-y-1 cursor-pointer">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary border-[2px] border-[#0A0A0A] flex items-center justify-center shadow-[2px_2px_0px_0px_#0A0A0A] shrink-0">
+<span class="material-symbols-outlined text-on-secondary text-[16px]">token</span>
+</div>
+<div>
+<span class="font-label-code-lg text-label-code-lg text-on-surface">#33b0</span>
+<span class="font-label-code-sm text-label-code-sm text-outline ml-1.5">84.0 kb · 2 hops</span>
+</div>
+</div>
+<span class="font-label-code-sm text-[10px] bg-primary-container px-1.5 py-0.5 border border-[#0A0A0A] font-bold">
+              13d left
+            </span>
+</div>
+<div class="mt-1.5 pt-1 border-t border-dashed border-[#0A0A0A]/30 flex justify-between items-center">
+<span class="font-label-code-sm text-[10px] text-on-surface-variant">TO: ? [hint: 0xb0] // FROM: ?</span>
+<span class="font-label-code-sm text-[10px] text-outline">photo mime attached</span>
+</div>
+</div>
+<!-- Envelope 5 -->
+<div class="relative bg-surface-container-lowest border-[3px] border-[#0A0A0A] shadow-[4px_4px_0px_0px_#0A0A0A] p-2.5 rotate-[-1.8deg] transition-transform active:translate-x-1 active:translate-y-1 cursor-pointer">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary-container border-[2px] border-[#0A0A0A] flex items-center justify-center shadow-[2px_2px_0px_0px_#0A0A0A] shrink-0">
+<span class="material-symbols-outlined text-on-secondary text-[16px]">tag</span>
+</div>
+<div>
+<span class="font-label-code-lg text-label-code-lg text-on-surface">#88ca</span>
+<span class="font-label-code-sm text-label-code-sm text-outline ml-1.5">1.2 kb · 4 hops</span>
+</div>
+</div>
+<span class="font-label-code-sm text-[10px] bg-surface-variant px-1.5 py-0.5 border border-[#0A0A0A] font-bold">
+              6d left
+            </span>
+</div>
+<div class="mt-1.5 pt-1 border-t border-dashed border-[#0A0A0A]/30 flex justify-between items-center">
+<span class="font-label-code-sm text-[10px] text-on-surface-variant">TO: ? [hint: 0xca] // FROM: ?</span>
+<span class="font-label-code-sm text-[10px] text-outline">subway mesh relay</span>
+</div>
+</div>
+<!-- Envelope 6 -->
+<div class="relative bg-surface-container-low border-[3px] border-[#0A0A0A] shadow-[4px_4px_0px_0px_#0A0A0A] p-2.5 rotate-[0.8deg] transition-transform active:translate-x-1 active:translate-y-1 cursor-pointer">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary border-[2px] border-[#0A0A0A] flex items-center justify-center shadow-[2px_2px_0px_0px_#0A0A0A] shrink-0">
+<span class="material-symbols-outlined text-on-secondary text-[16px]">emergency</span>
+</div>
+<div>
+<span class="font-label-code-lg text-label-code-lg text-on-surface">#e205</span>
+<span class="font-label-code-sm text-label-code-sm text-outline ml-1.5">6.4 kb · 1 hop</span>
+</div>
+</div>
+<span class="font-label-code-sm text-[10px] bg-primary-container px-1.5 py-0.5 border border-[#0A0A0A] font-bold">
+              10d left
+            </span>
+</div>
+<div class="mt-1.5 pt-1 border-t border-dashed border-[#0A0A0A]/30 flex justify-between items-center">
+<span class="font-label-code-sm text-[10px] text-on-surface-variant">TO: ? [hint: 0x05] // FROM: ?</span>
+<span class="font-label-code-sm text-[10px] text-outline">nearby neighbor packet</span>
+</div>
+</div>
+</div>
+<!-- Bottom Hem Stitching line of bag -->
+<div class="w-full mt-4 border-b-[3px] border-dashed border-[#0A0A0A]/40"></div>
+</div>
+<!-- Handwritten Caveat bus note beneath the bag -->
+<div class="mt-2 flex items-center justify-between px-1">
+<p class="font-hand-note text-hand-note text-tertiary">
+        you carried letter #a91f all the way across town on the 49 bus! 🚌✨
+      </p>
+</div>
+</section>
+<!-- STORAGE TELEMETRY METER (20 CELLS) -->
+<section class="px-margin mt-5">
+<div class="bg-surface-container border-[3px] border-[#0A0A0A] p-3 shadow-[4px_4px_0px_0px_#0A0A0A]">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-code-sm text-[11px] font-bold uppercase tracking-wider text-on-surface">
+          pouch storage quota
+        </span>
+<button class="bg-surface border-[2px] border-[#0A0A0A] px-2 py-0.5 font-label-code-sm text-[10px] font-bold text-on-surface uppercase shadow-[2px_2px_0px_0px_#0A0A0A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1" id="btn-budget">
+<span>budget settings</span>
+<span class="material-symbols-outlined text-[13px]">settings</span>
+</button>
+</div>
+<!-- 20 Square Cells Bar -->
+<div class="grid grid-cols-10 gap-1.5 my-2">
+<!-- 6 Occupied Blue Cells -->
+<div class="h-6 bg-tertiary border-[2px] border-[#0A0A0A] shadow-[1px_1px_0px_0px_#0A0A0A]" title="Packet #1"></div>
+<div class="h-6 bg-tertiary border-[2px] border-[#0A0A0A] shadow-[1px_1px_0px_0px_#0A0A0A]" title="Packet #2"></div>
+<div class="h-6 bg-tertiary border-[2px] border-[#0A0A0A] shadow-[1px_1px_0px_0px_#0A0A0A]" title="Packet #3"></div>
+<div class="h-6 bg-tertiary border-[2px] border-[#0A0A0A] shadow-[1px_1px_0px_0px_#0A0A0A]" title="Packet #4"></div>
+<div class="h-6 bg-tertiary border-[2px] border-[#0A0A0A] shadow-[1px_1px_0px_0px_#0A0A0A]" title="Packet #5"></div>
+<div class="h-6 bg-tertiary border-[2px] border-[#0A0A0A] shadow-[1px_1px_0px_0px_#0A0A0A]" title="Packet #6"></div>
+<!-- 14 Free Cells -->
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+<div class="h-6 bg-surface-container-lowest border-[2px] border-[#0A0A0A]/50"></div>
+</div>
+<!-- Telemetry Readout -->
+<div class="flex items-center justify-between mt-2">
+<span class="font-label-code-sm text-label-code-sm font-bold text-on-surface">
+          using 3.1 / 20 mb for strangers (6 envelopes)
+        </span>
+<span class="font-label-code-sm text-[10px] text-tertiary font-bold uppercase">15.5% full</span>
+</div>
+<p class="font-label-code-sm text-[10px] text-outline mt-1 leading-normal">
+        auto-evicts oldest expired after 14 days · wifi direct + ble only
+      </p>
+</div>
+</section>
+<!-- "HOW IT WORKS" 3-PANEL ZINE COMIC STRIP -->
+<section class="px-margin mt-5">
+<div class="flex items-center gap-2 mb-2">
+<span class="font-headline-sm text-headline-sm text-on-surface lowercase">zine field guide</span>
+<span class="font-label-code-sm text-[10px] text-outline uppercase font-mono">// issue 04</span>
+</div>
+<!-- Comic Strip Grid -->
+<div class="grid grid-cols-3 gap-2">
+<!-- Panel 1 -->
+<div class="relative bg-surface-container-low border-[3px] border-[#0A0A0A] p-2 shadow-[3px_3px_0px_0px_#0A0A0A] flex flex-col justify-between">
+<!-- Masking tape corner -->
+<div class="absolute -top-1.5 -left-1.5 w-6 h-3 bg-[#f9e27a]/90 border border-[#0A0A0A] -rotate-12 pointer-events-none"></div>
+<div>
+<span class="font-label-code-sm text-[10px] font-bold text-on-surface block leading-tight">1. seals a letter</span>
+<div class="my-2 flex flex-col items-center justify-center h-12 bg-surface border border-dashed border-[#0A0A0A]">
+<span class="material-symbols-outlined text-secondary text-[24px]">mark_email_unread</span>
+</div>
+</div>
+<p class="font-label-code-sm text-[9px] text-outline leading-tight mt-1">
+          encrypted with recipient's pairwise key.
+        </p>
+</div>
+<!-- Panel 2 -->
+<div class="relative bg-surface-container-low border-[3px] border-[#0A0A0A] p-2 shadow-[3px_3px_0px_0px_#0A0A0A] flex flex-col justify-between">
+<div>
+<span class="font-label-code-sm text-[10px] font-bold text-on-surface block leading-tight">2. phone carries</span>
+<div class="my-2 flex flex-col items-center justify-center h-12 bg-surface border border-dashed border-[#0A0A0A]">
+<span class="material-symbols-outlined text-tertiary text-[24px]">directions_walk</span>
+</div>
+</div>
+<p class="font-label-code-sm text-[9px] text-outline leading-tight mt-1">
+          zero servers. carried in your physical pouch.
+        </p>
+</div>
+<!-- Panel 3 -->
+<div class="relative bg-surface-container-low border-[3px] border-[#0A0A0A] p-2 shadow-[3px_3px_0px_0px_#0A0A0A] flex flex-col justify-between">
+<!-- Masking tape corner -->
+<div class="absolute -top-1.5 -right-1.5 w-6 h-3 bg-[#f9e27a]/90 border border-[#0A0A0A] rotate-12 pointer-events-none"></div>
+<div>
+<span class="font-label-code-sm text-[10px] font-bold text-on-surface block leading-tight">3. clout +1</span>
+<div class="my-2 flex flex-col items-center justify-center h-12 bg-surface border border-dashed border-[#0A0A0A]">
+<span class="material-symbols-outlined text-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+</div>
+<p class="font-label-code-sm text-[9px] text-outline leading-tight mt-1">
+          crypto proof ack signed, badge rank grows.
+        </p>
+</div>
+</div>
+</section>
+<!-- RECENTLY DELIVERED DISPATCH LOG -->
+<section class="px-margin mt-5">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface lowercase">recent courier deliveries</h3>
+<span class="font-label-code-sm text-[10px] bg-primary-container px-2 py-0.5 border border-[#0A0A0A] font-bold uppercase shadow-[2px_2px_0px_0px_#0A0A0A]">
+        3 ack this week
+      </span>
+</div>
+<!-- Perforated Ticket Stubs List -->
+<div class="flex flex-col gap-2">
+<!-- Receipt 1 -->
+<div class="relative bg-surface-container border-[3px] border-[#0A0A0A] p-3 shadow-[4px_4px_0px_0px_#0A0A0A] rotate-[-0.4deg]">
+<!-- Stamp DELIVERED -->
+<div class="absolute top-2 right-2 border-[2px] border-primary text-primary px-2 py-0.5 font-label-code-sm text-[10px] font-black uppercase rotate-[8deg] bg-surface-bright/90 select-none">
+          delivered ✓
+        </div>
+<div class="flex items-center gap-1.5 font-label-code-sm text-[11px] font-bold text-on-surface">
+<span>letter #71bc</span>
+<span class="text-outline">·</span>
+<span class="text-outline">4h ago</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1 leading-snug pr-20">
+          you were hop 2 of 3 · handed off to <span class="font-bold text-on-surface">@zoe</span> at central market
+        </p>
+<div class="mt-2 pt-1 border-t border-dashed border-[#0A0A0A]/20 flex items-center justify-between">
+<span class="font-label-code-sm text-[10px] text-outline font-mono">ack proof: 0x9a84...33</span>
+<span class="font-label-code-sm text-[11px] font-bold text-primary flex items-center gap-0.5">
+<span>+1 scout clout</span>
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+</span>
+</div>
+</div>
+<!-- Receipt 2 -->
+<div class="relative bg-surface-container border-[3px] border-[#0A0A0A] p-3 shadow-[4px_4px_0px_0px_#0A0A0A] rotate-[0.6deg]">
+<div class="absolute top-2 right-2 border-[2px] border-primary text-primary px-2 py-0.5 font-label-code-sm text-[10px] font-black uppercase rotate-[-6deg] bg-surface-bright/90 select-none">
+          delivered ✓
+        </div>
+<div class="flex items-center gap-1.5 font-label-code-sm text-[11px] font-bold text-on-surface">
+<span>letter #3e09</span>
+<span class="text-outline">·</span>
+<span class="text-outline">yesterday</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1 leading-snug pr-20">
+          you were hop 1 of 2 · handed off to stranger node <span class="font-mono text-[11px] bg-surface-variant px-1">#8b</span> on streetcar line
+        </p>
+<div class="mt-2 pt-1 border-t border-dashed border-[#0A0A0A]/20 flex items-center justify-between">
+<span class="font-label-code-sm text-[10px] text-outline font-mono">ack proof: 0x44f1...aa</span>
+<span class="font-label-code-sm text-[11px] font-bold text-primary flex items-center gap-0.5">
+<span>+1 scout clout</span>
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+</span>
+</div>
+</div>
+<!-- Receipt 3 -->
+<div class="relative bg-surface-container border-[3px] border-[#0A0A0A] p-3 shadow-[4px_4px_0px_0px_#0A0A0A] rotate-[-0.7deg]">
+<div class="absolute top-2 right-2 border-[2px] border-primary text-primary px-2 py-0.5 font-label-code-sm text-[10px] font-black uppercase rotate-[4deg] bg-surface-bright/90 select-none">
+          delivered ✓
+        </div>
+<div class="flex items-center gap-1.5 font-label-code-sm text-[11px] font-bold text-on-surface">
+<span>letter #11d4</span>
+<span class="text-outline">·</span>
+<span class="text-outline">3d ago</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-1 leading-snug pr-20">
+          direct handoff to ultimate recipient · ridge trail shelter (off-grid)
+        </p>
+<div class="mt-2 pt-1 border-t border-dashed border-[#0A0A0A]/20 flex items-center justify-between">
+<span class="font-label-code-sm text-[10px] text-outline font-mono">ack proof: 0x7c22...e9</span>
+<span class="font-label-code-sm text-[11px] font-bold text-primary flex items-center gap-0.5">
+<span>+1 scout clout</span>
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ACTION TRIGGER: MESH BROADCAST PING -->
+<section class="px-margin mt-6 flex flex-col gap-2">
+<button class="w-full bg-primary-container text-on-surface py-3 px-4 border-[3px] border-[#0A0A0A] font-headline-sm text-headline-sm lowercase shadow-[6px_6px_0px_0px_#0A0A0A] active:translate-x-[6px] active:translate-y-[6px] active:shadow-none transition-all flex items-center justify-center gap-2" id="btn-broadcast-ping">
+<span class="material-symbols-outlined text-[24px]">rss_feed</span>
+<span>broadcast carry signal</span>
+</button>
+<div class="flex items-center justify-center gap-1">
+<span class="font-label-code-sm text-[10px] text-outline lowercase">chirps via bluetooth low-energy to announce courier space</span>
+</div>
+</section>
+</div>
+<script>
+  // Micro-interaction for Broadcast Ping Button
+  const broadcastBtn = document.getElementById('btn-broadcast-ping');
+  if (broadcastBtn) {
+    broadcastBtn.addEventListener('click', () => {
+      const originalText = broadcastBtn.innerHTML;
+      broadcastBtn.innerHTML = `
+        <span class="material-symbols-outlined text-[24px] animate-spin">sync</span>
+        <span>chirping mesh beacons (3s)...</span>
+      `;
+      broadcastBtn.classList.replace('bg-primary-container', 'bg-tertiary');
+      broadcastBtn.classList.add('text-on-tertiary');
+
+      setTimeout(() => {
+        broadcastBtn.innerHTML = `
+          <span class="material-symbols-outlined text-[24px]">done_all</span>
+          <span>4 peers heard carry beacon!</span>
+        `;
+        broadcastBtn.classList.replace('bg-tertiary', 'bg-primary-container');
+        broadcastBtn.classList.remove('text-on-tertiary');
+
+        setTimeout(() => {
+          broadcastBtn.innerHTML = originalText;
+        }, 2500);
+      }, 1200);
+    });
+  }
+
+  // Budget settings feedback
+  const budgetBtn = document.getElementById('btn-budget');
+  if (budgetBtn) {
+    budgetBtn.addEventListener('click', () => {
+      alert('pouch capacity fixed at 20 mb. oldest stranger packets auto-expire to protect phone flash storage.');
+    });
+  }
+</script></main></body></html>

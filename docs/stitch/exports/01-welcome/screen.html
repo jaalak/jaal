@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=412, height=915, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>jaal · off-grid zine network</title>
+<!-- Google Fonts for Off-Grid Zine Aesthetic -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Caveat:wght@600;700&amp;family=Space+Grotesk:wght@500;700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config Customizations -->
+<script data-purpose="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'paper': '#F4F1E8',
+            'ink': '#0A0A0A',
+            'acid-lime': '#C6FF00',
+            'stamp-red': '#D7263D',
+            'mesh-blue': '#3D5AFE',
+            'tape-yellow': '#F9E27A',
+            'xerox-grey': '#8A857A'
+          },
+          fontFamily: {
+            'archivo': ['"Archivo Black"', 'sans-serif'],
+            'grotesk': ['"Space Grotesk"', 'sans-serif'],
+            'mono': ['"Space Mono"', 'monospace'],
+            'caveat': ['"Caveat"', 'cursive']
+          },
+          boxShadow: {
+            'brutal': '6px 6px 0px #0A0A0A',
+            'brutal-sm': '3px 3px 0px #0A0A0A',
+            'brutal-polaroid': '5px 5px 0px #0A0A0A'
+          }
+        }
+      }
+    };
+  </script>
+<!-- Global Structural Styles -->
+<style data-purpose="global-resets">
+    * {
+      border-radius: 0px !important;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    body {
+      background-color: #F4F1E8;
+      color: #0A0A0A;
+      overflow-x: hidden;
+    }
+  </style>
+<!-- Custom Tape & Stamp Aesthetics -->
+<style data-purpose="zine-textures">
+    /* Masking tape serrated edge simulation */
+    .masking-tape {
+      background-color: rgba(249, 226, 122, 0.88);
+      clip-path: polygon(
+        0% 4px, 2px 0px, 4px 4px, 6px 1px, 8px 4px, 100% 0px, 
+        98% 96%, 100% 100%, 96% 98%, 94% 100%, 0% 98%
+      );
+    }
+    
+    .tape-corner {
+      background-color: rgba(249, 226, 122, 0.85);
+      clip-path: polygon(2% 0%, 98% 4%, 100% 95%, 96% 100%, 3% 97%, 0% 6%);
+    }
+
+    /* Ink stamp texture simulation */
+    .ink-stamp-border {
+      border-style: solid;
+      border-color: #D7263D;
+      outline: 1.5px dashed #D7263D;
+      outline-offset: -3px;
+    }
+  </style>
+</head>
+<body class="h-full w-full flex justify-center items-center bg-[#E5E0D5]">
+<!-- Fixed Mobile Canvas Wrapper (412x915 simulated viewport) -->
+<div class="relative w-full max-w-[412px] h-[915px] max-h-screen bg-paper flex flex-col justify-between overflow-hidden border-[3px] border-ink shadow-2xl">
+<!-- BEGIN: NoiseOverlay -->
+<!-- Subtle Xerox Halftone & Grain SVG Noise Filter -->
+<svg aria-hidden="true" class="pointer-events-none absolute inset-0 z-50 h-full w-full opacity-[0.065]" xmlns="http://www.w3.org/2000/svg">
+<filter id="noiseFilter">
+<feturbulence basefrequency="0.85" numoctaves="3" stitchtiles="stitch" type="fractalNoise"></feturbulence>
+<fecolormatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"></fecolormatrix>
+</filter>
+<rect filter="url(#noiseFilter)" height="100%" width="100%"></rect>
+</svg>
+<!-- END: NoiseOverlay -->
+<!-- BEGIN: TopHeaderSection -->
+<header class="pt-5 px-5 flex flex-col z-20 relative">
+<!-- Tape Strip Badge -->
+<div class="self-start -rotate-2 mb-1.5" data-purpose="status-tape-badge">
+<div class="masking-tape px-3 py-1 border-t border-b border-[#333]/20 shadow-[1px_2px_0px_rgba(0,0,0,0.15)]">
+<span class="font-mono text-[11px] font-bold tracking-widest uppercase text-ink">
+            v0.1 · offline
+          </span>
+</div>
+</div>
+<!-- Giant Wordmark with Acid Lime Highlighter Swatch -->
+<div class="relative mt-0.5 inline-block" data-purpose="jaal-branding">
+<!-- Highlighter block placed strictly behind lower half of text -->
+<span class="absolute left-[-4px] bottom-[6px] w-[215px] h-[36px] bg-acid-lime -z-10 transform -rotate-1 border border-ink/10"></span>
+<h1 class="font-archivo text-[92px] leading-[0.82] tracking-tighter text-ink lowercase">
+          jaal
+        </h1>
+</div>
+<!-- Manifesto Punchline -->
+<div class="mt-2 text-ink font-archivo text-[32px] leading-[0.98] tracking-tight lowercase">
+<p class="m-0">no wifi?</p>
+<p class="m-0">no problem.</p>
+</div>
+</header>
+<!-- END: TopHeaderSection -->
+<!-- BEGIN: MiddleCollageMeshSection -->
+<section class="relative flex-1 w-full mx-auto my-[-4px] z-10 flex items-center justify-center" data-purpose="polaroid-p2p-mesh">
+<!-- Hand-drawn Peer Mesh Vector Lines & Rubber Postmark Stamps -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-10" fill="none" viewbox="0 0 412 390" xmlns="http://www.w3.org/2000/svg">
+<!-- Blue dashed mesh link between Polaroid 1 and 2 -->
+<path d="M 115 130 C 145 105, 230 115, 280 135" stroke="#3D5AFE" stroke-dasharray="4 4" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Blue dashed mesh link between Polaroid 2 and 3 -->
+<path d="M 270 205 C 240 230, 215 220, 160 250" stroke="#3D5AFE" stroke-dasharray="5 3" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Blue dashed mesh link between Polaroid 1 and 3 -->
+<path d="M 120 180 C 105 210, 115 235, 135 260" stroke="#3D5AFE" stroke-dasharray="3 4" stroke-linecap="round" stroke-width="2"></path>
+<!-- Hand-drawn Arrow pointing to network explanation -->
+<path d="M 235 342 Q 225 365 200 372" fill="none" stroke="#3D5AFE" stroke-linecap="round" stroke-width="2"></path>
+<path d="M 207 363 L 199 372 L 209 376" fill="none" stroke="#3D5AFE" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<!-- Postmark Red Rubber Stamp Hop 1 -->
+<div class="absolute left-[180px] top-[95px] z-20 transform -rotate-12 pointer-events-none" data-purpose="hop-stamp-1">
+<div class="w-12 h-12 rounded-full border-2 border-stamp-red flex flex-col items-center justify-center bg-paper/90 ink-stamp-border text-stamp-red px-1 opacity-90 shadow-[1px_1px_0px_#0A0A0A]">
+<span class="font-mono text-[8.5px] uppercase font-bold leading-none tracking-tighter">mesh</span>
+<span class="font-mono text-[10px] font-black uppercase leading-tight tracking-tight">1 hop</span>
+</div>
+</div>
+<!-- Postmark Red Rubber Stamp Hop 2 -->
+<div class="absolute right-[92px] top-[225px] z-20 transform rotate-6 pointer-events-none" data-purpose="hop-stamp-2">
+<div class="w-12 h-12 rounded-full border-2 border-stamp-red flex flex-col items-center justify-center bg-paper/90 ink-stamp-border text-stamp-red px-1 opacity-90 shadow-[1px_1px_0px_#0A0A0A]">
+<span class="font-mono text-[8.5px] uppercase font-bold leading-none tracking-tighter">direct</span>
+<span class="font-mono text-[10px] font-black uppercase leading-tight tracking-tight">2 hops</span>
+</div>
+</div>
+<!-- Handwritten Aside annotation -->
+<div class="absolute bottom-1 right-5 z-20 transform rotate-1 pointer-events-none" data-purpose="handwritten-annotation">
+<p class="font-caveat text-[21px] text-mesh-blue font-bold tracking-tight leading-none text-right">
+          a social network that runs on<br/>people, not towers ↓
+        </p>
+</div>
+<!-- POLAROID 1: Mountain ridge trekking (Bottom Left) -->
+<article class="absolute left-4 top-5 w-[172px] bg-[#FAF8F2] border-[3px] border-ink shadow-brutal-polaroid p-2 transform -rotate-6 z-10 transition-transform" data-purpose="polaroid-card-1">
+<!-- Masking tape securing top edge -->
+<div class="absolute -top-3.5 left-8 w-16 h-5 tape-corner border-t border-b border-ink/20 shadow-sm z-30 transform -rotate-3"></div>
+<div class="w-full aspect-square border-2 border-ink bg-black overflow-hidden relative">
+<img alt="Friends trekking on mountain hill ridge" class="w-full h-full object-cover grayscale contrast-150" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBQeqUZeVQFHCoDwKYiYAYKzMUGsbrmDIrTJglDaDq2wuGW8DqqHNl3uGd_hD1VTEqajb4VtCw07ESbhP30L4XYqNDw5KHTLdM-j40qdqyEzJR2A5u4Lp94UnwbcDXBvfbi0_4CK_0oCLiPtSAt4kwZPW9j4Y4vE9nI9d-hWgAaLLAJ1hKRFgzGoriiMUl0N1T3egG_TYdsXiLPJm5QitN8HTWJhz7ZungY-bq7CE"/>
+</div>
+<!-- Polaroid Bottom Chin with handwritten caption -->
+<div class="pt-2 pb-1 px-1">
+<p class="font-caveat text-[17px] text-ink font-bold leading-tight truncate">
+            himachal ridge · @kavi
+          </p>
+</div>
+</article>
+<!-- POLAROID 2: Music festival crowd (Top Right, Overlapping) -->
+<article class="absolute right-4 top-2 w-[184px] bg-[#FAF8F2] border-[3px] border-ink shadow-brutal-polaroid p-2 transform rotate-3 z-20" data-purpose="polaroid-card-2">
+<!-- Die-cut Sticker on border edge -->
+<div class="absolute -top-3 -right-2 bg-acid-lime border-[2px] border-ink px-1.5 py-0.5 shadow-[2px_2px_0px_#0A0A0A] z-40 transform rotate-12">
+<span class="font-archivo text-[10px] text-ink uppercase tracking-wider block">100% REAL</span>
+</div>
+<div class="w-full aspect-square border-2 border-ink bg-black overflow-hidden relative">
+<img alt="Festival crowd with raised hands" class="w-full h-full object-cover grayscale contrast-150" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKmC2ajwiUnn4g-0yE2ePlXD5f6jhWDX8MN0qwAXBO6V8YTMsktAt-QEp-d5Fs4QMVjs9ELaf6Pgp8SYAMqk9VG8QCiF9OdFme4XG4odFjA2u-cdfLDvrvfq_kdfGrV0ho4cOTCSRSfn76TTnglUyq1bgyfYMi37nq_4b3i3Rf696550XMXqMa2asOQiaWZ3Cf0roZLRdLjW_Ev3MOWvBod2Zf-lFa-EOIGJXXKtU"/>
+</div>
+<!-- Polaroid Bottom Chin -->
+<div class="pt-2 pb-1 px-1">
+<p class="font-caveat text-[17px] text-ink font-bold leading-tight truncate">
+            block party stage · @dani
+          </p>
+</div>
+</article>
+<!-- POLAROID 3: Bus window contemplation (Bottom Center / Left overlap) -->
+<article class="absolute left-[78px] top-[148px] w-[178px] bg-[#FAF8F2] border-[3px] border-ink shadow-brutal p-2 transform -rotate-2 z-30" data-purpose="polaroid-card-3">
+<div class="w-full aspect-square border-2 border-ink bg-black overflow-hidden relative">
+<img alt="Person looking out wet city bus window" class="w-full h-full object-cover grayscale contrast-150" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlALgqkzGV5QhJwEY-kO2M6CIkoBe4WDXtjIMktrhOGm_7NrCNLWFmrH2fBoymb_4siJa2ahvyjFxq06Jt6vagdINLnywk6Xq7x1KEXo_PYgB8dGfmrFsjGbQp7kFpubRW3p1ZMiaW9DfHswoZFo7-k8NmY1Sk3ciFnTp_mskWI6Xs4OS8jm78c1kSTWrvBxhS3L1rjQkJmAupXBED3SsUsWY1x32ipXrsJFfWMQ4"/>
+</div>
+<!-- Polaroid Bottom Chin -->
+<div class="pt-2 pb-1 px-1">
+<p class="font-caveat text-[17px] text-ink font-bold leading-tight truncate">
+            route 44 · @sam
+          </p>
+</div>
+</article>
+</section>
+<!-- END: MiddleCollageMeshSection -->
+<!-- BEGIN: BottomActionSection -->
+<footer class="p-5 pb-6 bg-paper flex flex-col gap-3 z-30" data-purpose="onboarding-actions">
+<!-- Primary Action: Make Me A Node -->
+<button aria-label="Make me a node" class="w-full h-[58px] bg-acid-lime text-ink font-grotesk font-bold text-[18px] uppercase tracking-wide border-[3px] border-ink shadow-brutal flex items-center justify-center gap-2 active:translate-x-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer" data-purpose="primary-node-btn" type="button">
+<span>make me a node</span>
+<!-- Electric Bolt / Spark Glyph -->
+<svg class="w-5 h-5 fill-current stroke-current" fill="none" stroke-linecap="square" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+</svg>
+</button>
+<!-- Secondary Action: Recovery Phrase -->
+<button aria-label="I have a recovery phrase" class="w-full h-[52px] bg-paper text-ink font-grotesk font-bold text-[15px] lowercase tracking-normal border-[3px] border-ink shadow-brutal flex items-center justify-center active:translate-x-1 active:translate-y-1 active:shadow-none transition-all cursor-pointer" data-purpose="secondary-recover-btn" type="button">
+<span>i have a recovery phrase</span>
+</button>
+<!-- Security Guarantee Microcopy -->
+<div class="pt-1 pb-0 flex items-center justify-center gap-1.5 text-xerox-grey text-center" data-purpose="security-note">
+<svg class="w-3.5 h-3.5 stroke-xerox-grey fill-none" stroke-linecap="square" stroke-width="2.5" viewbox="0 0 24 24">
+<rect height="11" rx="0" ry="0" width="18" x="3" y="11"></rect>
+<path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+</svg>
+<span class="font-mono text-[11px] font-medium tracking-tight">
+          your keys never leave this phone
+        </span>
+</div>
+</footer>
+<!-- END: BottomActionSection -->
+</div>
+</body></html>

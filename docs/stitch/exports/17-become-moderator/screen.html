@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;family=Space+Grotesk:wght@500;700&amp;family=Space+Mono:ital,wght@0,400;0,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#fcf9f0", "inverse-on-surface": "#f4f1e8", "error-container": "#ffdad6", "surface-container-high": "#ebe8df", "on-secondary-container": "#fffbff", "outline": "#747a60", "surface-container-lowest": "#ffffff", "surface-tint": "#4e6700", "surface": "#fcf9f0", "on-surface-variant": "#434933", "on-error-container": "#93000a", "primary-container": "#c6ff00", "inverse-surface": "#31312b", "surface-container": "#f1eee5", "outline-variant": "#c3caac", "secondary-fixed": "#ffd9e5", "inverse-primary": "#a6d700", "tertiary-fixed": "#dee0ff", "on-tertiary-container": "#3856fa", "on-primary-fixed": "#151f00", "tertiary": "#2848ee", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#8c0055", "primary-fixed-dim": "#a6d700", "on-surface": "#1c1c17", "surface-variant": "#e5e2da", "on-primary-fixed-variant": "#3a4d00", "on-primary-container": "#587300", "on-error": "#ffffff", "primary-fixed": "#bef500", "surface-container-highest": "#e5e2da", "secondary-fixed-dim": "#ffb0ce", "secondary": "#b3006e", "surface-container-low": "#f6f3ea", "on-background": "#1c1c17", "tertiary-container": "#eaeaff", "surface-dim": "#dddad1", "error": "#ba1a1a", "on-tertiary-fixed-variant": "#002ccd", "tertiary-fixed-dim": "#bbc3ff", "primary": "#4e6700", "surface-bright": "#fcf9f0", "on-secondary-fixed": "#3d0022", "on-tertiary": "#ffffff", "on-secondary": "#ffffff", "secondary-container": "#db1989", "on-tertiary-fixed": "#000f5d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "0.75rem", "margin": "1rem", "space-sm": "0.5rem", "space-lg": "1.25rem", "gutter": "0.75rem", "space-xl": "2rem", "space-xs": "0.25rem" }, "fontFamily": { "display-xl": [ "Space Grotesk" ], "headline-lg": [ "Space Grotesk" ], "label-code-lg": [ "Space Mono" ], "body-md": [ "Space Grotesk" ], "label-code-sm": [ "Space Mono" ], "hand-note": [ "Caveat" ], "body-sm": [ "Space Grotesk" ], "headline-sm": [ "Space Grotesk" ], "body-lg": [ "Space Grotesk" ], "headline-md": [ "Space Grotesk" ], "display-xl-mobile": [ "Space Grotesk" ] }, "fontSize": { "display-xl": [ "56px", { "lineHeight": "54px", "letterSpacing": "-0.04em", "fontWeight": "700" } ], "headline-lg": [ "36px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" } ], "label-code-lg": [ "13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "700" } ], "body-md": [ "14px", { "lineHeight": "20px", "fontWeight": "500" } ], "label-code-sm": [ "11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "400" } ], "hand-note": [ "22px", { "lineHeight": "24px", "fontWeight": "600" } ], "body-sm": [ "13px", { "lineHeight": "18px", "fontWeight": "500" } ], "headline-sm": [ "20px", { "lineHeight": "22px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "body-lg": [ "16px", { "lineHeight": "22px", "fontWeight": "500" } ], "headline-md": [ "26px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" } ], "display-xl-mobile": [ "40px", { "lineHeight": "40px", "letterSpacing": "-0.04em", "fontWeight": "700" } ] } } } };</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary-fixed"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-label-code-sm text-label-code-sm text-on-surface-variant uppercase">jaal //</span><h1 class="font-headline-sm text-headline-sm text-on-surface lowercase tracking-tight">Vouch / Moderator</h1></div><span class="font-label-code-sm text-label-code-sm text-outline lowercase">protocol v1 // consensus</span></div></div><div class="flex items-center pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen px-margin"><div class="flex flex-col w-full pb-10">
+<!-- TOP ARTBOARD SWITCHER PILL / TAB BAR -->
+<div class="sticky top-16 z-40 -mx-margin px-margin py-space-sm bg-surface/95 backdrop-blur-sm border-b-[3px] border-on-surface">
+<div class="flex items-center gap-1.5 p-1 bg-surface-container border-[3px] border-on-surface shadow-[4px_4px_0px_0px_#0A0A0A] overflow-x-auto scrollbar-none">
+<button class="flex-1 py-1.5 px-2 bg-primary-container text-on-primary-fixed border-[2px] border-on-surface font-label-code-sm text-label-code-sm tracking-tight text-center whitespace-nowrap shadow-[2px_2px_0px_0px_#0A0A0A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" id="tab-btn-1" onclick="switchArtboard(1)">
+        [1] candidate punch
+      </button>
+<button class="flex-1 py-1.5 px-2 bg-surface-container-lowest text-on-surface border-[2px] border-transparent font-label-code-sm text-label-code-sm tracking-tight text-center whitespace-nowrap active:translate-x-[2px] active:translate-y-[2px] transition-all" id="tab-btn-2" onclick="switchArtboard(2)">
+        [2] mod scanner
+      </button>
+<button class="flex-1 py-1.5 px-2 bg-surface-container-lowest text-on-surface border-[2px] border-transparent font-label-code-sm text-label-code-sm tracking-tight text-center whitespace-nowrap active:translate-x-[2px] active:translate-y-[2px] transition-all" id="tab-btn-3" onclick="switchArtboard(3)">
+        [3] you're in! ★
+      </button>
+</div>
+</div>
+<!-- ============================================================= -->
+<!-- ARTBOARD 1: CANDIDATE "COLLECT 3 STAMPS"                      -->
+<!-- ============================================================= -->
+<section class="flex flex-col w-full gap-space-lg pt-space-md" id="artboard-1">
+<!-- Hero Header / Zine Title Block -->
+<div class="relative flex flex-col gap-1">
+<!-- Tape Strip Label -->
+<div class="inline-flex self-start px-2 py-0.5 bg-[#F9E27A] border-[2px] border-on-surface text-on-surface font-label-code-sm text-label-code-sm font-bold uppercase tracking-widest shadow-[2px_2px_0px_0px_#0A0A0A] -rotate-1">
+        tape://invite-only consensus
+      </div>
+<!-- Highlighter Headline -->
+<div class="relative mt-1">
+<span class="absolute inset-x-0 bottom-1 h-7 bg-tertiary -skew-x-6 -rotate-1 -z-10 opacity-90"></span>
+<h2 class="font-headline-lg text-headline-lg tracking-tight text-on-surface uppercase pl-1">
+          get vouched in.
+        </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[340px] lowercase mt-0.5">
+        moderators are invite-only. 3 active node stewards must physically meet and stamp your device.
+      </p>
+</div>
+<!-- VINTAGE LIBRARY DUE-DATE / PUNCH CARD -->
+<div class="relative bg-[#EFE9D8] border-[3px] border-on-surface p-space-md shadow-[6px_6px_0px_0px_#0A0A0A] rotate-[-0.5deg]">
+<!-- Top Masking Tape Simulation -->
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 w-28 h-5 bg-[#F9E27A]/90 border-x-[2px] border-on-surface/40 shadow-sm" style="clip-path: polygon(4% 0%, 96% 0%, 100% 100%, 0% 100%);"></div>
+<!-- Library Pocket Card Header -->
+<div class="flex items-start justify-between border-b-[2px] border-on-surface/30 pb-2 mb-3">
+<div class="flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant font-bold uppercase tracking-wider">
+            borrower / candidate record
+          </span>
+<span class="font-label-code-lg text-label-code-lg text-on-surface uppercase tracking-tight">
+            jaal mesh civic trust // form-7
+          </span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-tertiary px-1.5 py-0.5 bg-surface border border-on-surface font-bold">
+          2 / 3 SIGS
+        </span>
+</div>
+<!-- Stamp Table Headers -->
+<div class="grid grid-cols-12 gap-1 pb-1 border-b-[2px] border-dashed border-on-surface/40 font-label-code-sm text-label-code-sm text-on-surface-variant uppercase text-center">
+<span class="col-span-3 text-left">slot</span>
+<span class="col-span-6">mod stamp &amp; signature</span>
+<span class="col-span-3 text-right">quorum</span>
+</div>
+<!-- STAMP SLOTS STACK -->
+<div class="flex flex-col gap-3 py-2">
+<!-- SLOT 1: VOUCHED (mod_01) -->
+<div class="relative flex items-center justify-between p-2 bg-[#F7F3E7] border-[2px] border-on-surface/40 min-h-[76px] overflow-hidden">
+<div class="flex flex-col z-10">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">slot 01 // peer</span>
+<span class="font-label-code-lg text-label-code-lg text-on-surface">@mod_01</span>
+</div>
+<!-- Rubber Stamp Impression -->
+<div class="absolute right-3 py-1 px-3 border-[3px] border-dashed border-[#D7263D] text-[#D7263D] font-label-code-sm text-label-code-sm font-bold uppercase rotate-[-4deg] opacity-90 select-none pointer-events-none">
+<div class="flex flex-col items-center leading-none text-center">
+<span>★ VOUCHED · MOD_01</span>
+<span class="text-[9px] tracking-widest mt-0.5">12 OCT 2024 · SIG: 0x9f7a</span>
+</div>
+</div>
+</div>
+<!-- SLOT 2: VOUCHED (zoe.zine) -->
+<div class="relative flex items-center justify-between p-2 bg-[#F7F3E7] border-[2px] border-on-surface/40 min-h-[76px] overflow-hidden">
+<div class="flex flex-col z-10">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">slot 02 // peer</span>
+<span class="font-label-code-lg text-label-code-lg text-on-surface">@zoe.zine</span>
+</div>
+<!-- Rubber Stamp Impression 2 -->
+<div class="absolute right-2 py-1 px-3 border-[3px] border-[#D7263D] text-[#D7263D] font-label-code-sm text-label-code-sm font-bold uppercase rotate-[3deg] opacity-90 select-none pointer-events-none">
+<div class="flex flex-col items-center leading-none text-center">
+<span>★ VOUCHED · ZOE</span>
+<span class="text-[9px] tracking-widest mt-0.5">13 OCT 2024 · IN-PERSON VERIFIED</span>
+</div>
+</div>
+</div>
+<!-- SLOT 3: EMPTY / NEEDED -->
+<div class="relative flex items-center justify-between p-3 border-[2px] border-dashed border-on-surface bg-surface-container-low/60 min-h-[82px]">
+<div class="flex flex-col">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">slot 03 // empty</span>
+<span class="font-headline-sm text-headline-sm text-outline tracking-wider uppercase">
+              [ 1 MORE VOUCH ]
+            </span>
+</div>
+<!-- Hand-written Yellow Note Sticker -->
+<div class="absolute -right-2 -bottom-2 px-3 py-1 bg-[#FFF9A6] border-[2px] border-on-surface shadow-[3px_3px_0px_0px_#0A0A0A] rotate-[-3deg] z-20">
+<span class="font-hand-note text-hand-note text-tertiary whitespace-nowrap">
+              just 1 more mod signature! ➔
+            </span>
+</div>
+</div>
+</div>
+<!-- Card Footer Metadata -->
+<div class="pt-2 mt-1 border-t-[2px] border-on-surface/30 flex items-center justify-between">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant">
+          ed25519 hash: 4c92...d81a
+        </span>
+<span class="font-label-code-sm text-label-code-sm font-bold text-on-surface">
+          STATUS: PENDING QUORUM
+        </span>
+</div>
+</div>
+<!-- ROTATING CONSENT QR CODE SECTION -->
+<div class="flex flex-col gap-space-xs bg-surface-container border-[3px] border-on-surface p-space-md shadow-[6px_6px_0px_0px_#0A0A0A] rotate-[0.5deg]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 bg-primary-container border-[1.5px] border-on-surface animate-pulse"></span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface font-bold uppercase">
+            live candidate token
+          </span>
+</div>
+<div class="px-2 py-0.5 bg-surface-container-lowest border-[2px] border-on-surface font-label-code-sm text-label-code-sm text-on-surface shadow-[2px_2px_0px_0px_#0A0A0A]">
+          ⏱ <span id="qr-timer">9:41</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface lowercase">
+        show this to a moderator in person. it states: <span class="font-bold">"i agree to uphold local mesh norms."</span>
+</p>
+<!-- Neo-brutalist QR code block -->
+<div class="flex flex-col items-center justify-center p-space-md bg-surface-container-lowest border-[3px] border-on-surface my-1 shadow-[inset_3px_3px_0px_0px_rgba(0,0,0,0.15)]">
+<!-- Synthetic High-contrast Grid Graphic simulating QR -->
+<div class="relative w-48 h-48 bg-white border-[3px] border-on-surface p-2 flex flex-col justify-between shadow-[3px_3px_0px_0px_#0A0A0A]">
+<!-- Corner Finder 1 -->
+<div class="absolute top-2 left-2 w-10 h-10 border-[4px] border-black flex items-center justify-center">
+<div class="w-4 h-4 bg-black"></div>
+</div>
+<!-- Corner Finder 2 -->
+<div class="absolute top-2 right-2 w-10 h-10 border-[4px] border-black flex items-center justify-center">
+<div class="w-4 h-4 bg-black"></div>
+</div>
+<!-- Corner Finder 3 -->
+<div class="absolute bottom-2 left-2 w-10 h-10 border-[4px] border-black flex items-center justify-center">
+<div class="w-4 h-4 bg-black"></div>
+</div>
+<!-- Pseudo Data Matrix Pixels -->
+<div class="w-full h-full grid grid-cols-10 grid-rows-10 gap-0.5 pointer-events-none p-1">
+<div class="col-start-5 col-span-2 row-start-2 row-span-2 bg-black"></div>
+<div class="col-start-4 col-span-1 row-start-5 row-span-1 bg-black"></div>
+<div class="col-start-5 col-span-2 row-start-5 row-span-2 bg-black"></div>
+<div class="col-start-8 col-span-2 row-start-4 row-span-1 bg-black"></div>
+<div class="col-start-7 col-span-1 row-start-6 row-span-3 bg-black"></div>
+<div class="col-start-2 col-span-2 row-start-5 row-span-1 bg-black"></div>
+<div class="col-start-5 col-span-1 row-start-8 row-span-2 bg-black"></div>
+<div class="col-start-8 col-span-1 row-start-8 row-span-1 bg-black"></div>
+<div class="col-start-9 col-span-1 row-start-9 row-span-1 bg-black"></div>
+</div>
+<!-- Mesh Center Stamp Seal -->
+<div class="absolute inset-0 m-auto w-9 h-9 bg-primary-container border-[2px] border-black flex items-center justify-center shadow-[2px_2px_0px_0px_#0A0A0A]">
+<span class="material-symbols-outlined text-on-surface text-[20px]">hub</span>
+</div>
+</div>
+<!-- Salt & Signature reassurance -->
+<div class="mt-3 text-center flex flex-col gap-0.5">
+<span class="font-label-code-sm text-label-code-sm text-on-surface font-bold">
+            MeetPurpose.moderator · signed ed25519 consent
+          </span>
+<span class="font-label-code-sm text-label-code-sm text-outline">
+            ephemeral salt: 0x81b7e // valid for 10 min
+          </span>
+</div>
+</div>
+<button class="w-full py-2.5 px-4 bg-surface-container-high border-[3px] border-on-surface font-label-code-lg text-label-code-lg text-on-surface uppercase tracking-tight flex items-center justify-center gap-2 shadow-[4px_4px_0px_0px_#0A0A0A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" onclick="switchArtboard(2)">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+        switch to moderator camera view ➔
+      </button>
+</div>
+</section>
+<!-- ============================================================= -->
+<!-- ARTBOARD 2: MODERATOR SCANNING CANDIDATE                      -->
+<!-- ============================================================= -->
+<section class="hidden flex flex-col w-full gap-space-lg pt-space-md" id="artboard-2">
+<!-- Header Block -->
+<div class="flex flex-col gap-1">
+<div class="inline-flex self-start px-2 py-0.5 bg-[#F9E27A] border-[2px] border-on-surface text-on-surface font-label-code-sm text-label-code-sm font-bold uppercase tracking-widest shadow-[2px_2px_0px_0px_#0A0A0A] rotate-1">
+        mode://moderator inspection
+      </div>
+<h2 class="font-headline-md text-headline-md tracking-tight uppercase text-on-surface mt-1">
+        scanning candidate qr
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant lowercase">
+        verify identity physically before affixing your root key signature.
+      </p>
+</div>
+<!-- CAMERA VIEWFINDER CARD -->
+<div class="relative bg-[#1A1A17] border-[3px] border-on-surface p-space-md overflow-hidden shadow-[6px_6px_0px_0px_#0A0A0A]">
+<!-- Top Telemetry Header -->
+<div class="flex items-center justify-between text-white border-b border-white/20 pb-2 mb-4 font-label-code-sm text-label-code-sm">
+<span class="text-primary-container font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+          REC · ISO 400
+        </span>
+<span class="text-white/80">FOCUS: LOCKED · 24FPS</span>
+<span class="text-primary-container">RSSI: -42dBm</span>
+</div>
+<!-- Viewfinder Center Window with Crop Marks -->
+<div class="relative w-full h-56 bg-[#2B2B24] border-2 border-white/10 flex items-center justify-center overflow-hidden">
+<!-- Corner Crop Marks -->
+<div class="absolute top-2 left-2 w-5 h-5 border-t-[3px] border-l-[3px] border-primary-container"></div>
+<div class="absolute top-2 right-2 w-5 h-5 border-t-[3px] border-r-[3px] border-primary-container"></div>
+<div class="absolute bottom-2 left-2 w-5 h-5 border-b-[3px] border-l-[3px] border-primary-container"></div>
+<div class="absolute bottom-2 right-2 w-5 h-5 border-b-[3px] border-r-[3px] border-primary-container"></div>
+<!-- Crosshair Reticle -->
+<div class="w-8 h-8 relative flex items-center justify-center opacity-70">
+<div class="w-full h-0.5 bg-primary-container"></div>
+<div class="h-full w-0.5 bg-primary-container absolute"></div>
+</div>
+<!-- Scanning Sweep Laser Line -->
+<div class="absolute inset-x-0 h-1 bg-primary-container shadow-[0_0_8px_#C6FF00] animate-pulse top-1/2 -translate-y-1/2"></div>
+<!-- QR Silhouette In View -->
+<div class="w-28 h-28 border-[2px] border-dashed border-primary-container/80 flex items-center justify-center opacity-60">
+<span class="font-label-code-sm text-label-code-sm text-primary-container uppercase text-center">
+            qr target<br/>acquired
+          </span>
+</div>
+<!-- Status Pill in Viewfinder -->
+<div class="absolute bottom-2 px-2 py-0.5 bg-black/80 border border-primary-container text-primary-container font-label-code-sm text-label-code-sm font-bold">
+          CANDIDATE DETECTED: ARJUN
+        </div>
+</div>
+<!-- Bottom telemetry -->
+<div class="mt-3 flex items-center justify-between text-white/60 font-label-code-sm text-label-code-sm">
+<span>DEV://DEV_NODE_09</span>
+<span>LATENCY: 12ms</span>
+</div>
+</div>
+<!-- VERIFICATION SLAP CARD (Slaps up into view) -->
+<div class="relative bg-surface border-[3px] border-on-surface p-space-md shadow-[6px_6px_0px_0px_#0A0A0A] rotate-[1.5deg]">
+<!-- Top Warning Banner / Tape -->
+<div class="p-2 bg-[#FFDAD6] border-[2px] border-[#BA1A1A] text-[#BA1A1A] font-label-code-sm text-label-code-sm font-bold uppercase tracking-wide flex items-center gap-1 mb-space-md">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+<span>only vouch for people you have met in person</span>
+</div>
+<!-- Candidate Polaroid + Identity -->
+<div class="flex items-center gap-space-md">
+<!-- Polaroid Avatar -->
+<div class="bg-surface-container-lowest p-2 pb-5 border-[3px] border-on-surface shadow-[3px_3px_0px_0px_#0A0A0A] -rotate-2 shrink-0">
+<div class="relative w-16 h-16 bg-surface-container border border-on-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up film grain portrait of young south asian community organizer arjun smiling in low key urban warm daylight, photocopied zine texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdZ-wfxg0P11bpPtRSB0bPfRargmX4bpPxlWE_hXT8gkuJJeiP4gaJ3ceCAwIGV47zkXN2QqMw0dRytvlBxouqtomGhcdMuge__xWxgp4lg4rBEPzT7LfjUt4wIDpFZy7opAEC6vhUwYJxAGckBoxUlgRVrlQh1rvojLLAEZusCwy6rLtLY-d-MZOZYXCdgmoInk0xFK-WPVcvDTHQktMMnODhNNxT6XAddruSh_I"/>
+<div class="absolute top-1 right-1 w-2.5 h-2.5 rounded-full bg-primary-container border border-on-surface"></div>
+</div>
+<div class="font-hand-note text-hand-note text-tertiary text-center leading-none mt-1.5">
+            arjun
+          </div>
+</div>
+<!-- Handle + Details -->
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate lowercase">
+            arjun deshmukh
+          </span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant font-bold truncate">
+            @arjun_rn · x91c4
+          </span>
+<div class="inline-flex self-start mt-1 px-1.5 py-0.5 bg-surface-container-highest border border-on-surface font-label-code-sm text-label-code-sm text-on-surface">
+            2/3 vouches collected
+          </div>
+</div>
+</div>
+<!-- Cryptographic verification checklist -->
+<div class="flex flex-col gap-1 mt-3 p-2 bg-surface-container border-[2px] border-on-surface/30 font-label-code-sm text-label-code-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-bold">✔</span>
+<span>consent timestamp verified: &lt; 30s ago</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-primary font-bold">✔</span>
+<span>neighborhood radio hop: direct bluetooth le</span>
+</div>
+</div>
+<!-- BIG ELECTRIC VOUCH BUTTON -->
+<div class="mt-4 flex flex-col gap-2">
+<button class="w-full py-3 bg-tertiary text-on-tertiary border-[3px] border-on-surface font-headline-sm text-headline-sm uppercase tracking-wider text-center shadow-[6px_6px_0px_0px_#0A0A0A] active:translate-x-[4px] active:translate-y-[4px] active:shadow-[2px_2px_0px_0px_#0A0A0A] transition-all flex items-center justify-center gap-2" id="vouch-action-btn" onclick="triggerVouchAction()">
+<span>AFFIX VOUCH STAMP ★</span>
+</button>
+<span class="font-label-code-sm text-label-code-sm text-outline text-center">
+          your vouch is signed with your mod root key and published to mesh peers
+        </span>
+</div>
+</div>
+</section>
+<!-- ============================================================= -->
+<!-- ARTBOARD 3: "YOU'RE IN" (CELEBRATION & ACCESS)                -->
+<!-- ============================================================= -->
+<section class="hidden flex flex-col w-full gap-space-lg pt-space-md" id="artboard-3">
+<!-- Full-Bleed Cobalt Blue Celebration Container -->
+<div class="relative bg-tertiary text-on-tertiary border-[3px] border-on-surface p-space-lg shadow-[8px_8px_0px_0px_#0A0A0A] rotate-[-0.5deg]">
+<!-- Top Decorative Masking Tape -->
+<div class="absolute -top-3 right-6 w-24 h-5 bg-[#F9E27A] border-x-[2px] border-on-surface shadow-sm rotate-3"></div>
+<!-- Scalloped Star Badge Container -->
+<div class="flex justify-between items-start mb-2">
+<!-- Scalloped Scout / Postage Badge -->
+<div class="relative inline-flex items-center justify-center p-3 bg-primary-container text-on-primary-fixed border-[3px] border-on-surface shadow-[4px_4px_0px_0px_#0A0A0A] -rotate-6">
+<div class="flex flex-col items-center leading-none text-center">
+<span class="material-symbols-outlined text-[28px] text-on-primary-fixed">verified</span>
+<span class="font-label-code-sm text-label-code-sm font-bold uppercase mt-1">
+              ★ MOD // CIVIC SHIELD
+            </span>
+</div>
+</div>
+<!-- Consensus Badge -->
+<div class="px-2 py-1 bg-surface-container-lowest text-on-surface border-[2px] border-on-surface font-label-code-sm text-label-code-sm font-bold uppercase shadow-[2px_2px_0px_0px_#0A0A0A]">
+          3 / 3 consensus
+        </div>
+</div>
+<!-- Headline -->
+<h2 class="font-headline-lg text-headline-lg uppercase tracking-tight text-[#FCF9F0] mt-3">
+        you're a moderator now.
+      </h2>
+<!-- Handwritten note -->
+<div class="my-2 flex items-center gap-2">
+<span class="font-hand-note text-hand-note text-primary-container -rotate-1">
+          with great power comes 2-vote bans. ✦
+        </span>
+</div>
+<p class="font-body-md text-body-md text-[#EAEBFF] lowercase mb-space-md">
+        three active stewards met you face-to-face and cryptographically signed your integrity into the mesh ledger.
+      </p>
+<!-- 3 POLAROIDS ROW: VOUCHED BY 3 TRUSTED NODES -->
+<div class="my-space-md p-3 bg-surface text-on-surface border-[3px] border-on-surface shadow-[4px_4px_0px_0px_#0A0A0A]">
+<div class="flex items-center justify-between border-b-[2px] border-on-surface/30 pb-1.5 mb-2.5">
+<span class="font-label-code-sm text-label-code-sm text-on-surface font-bold uppercase">
+            vouched by 3 trusted nodes
+          </span>
+<span class="font-label-code-sm text-label-code-sm text-tertiary">
+            ledger quorum ok
+          </span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<!-- Polaroid 1 -->
+<div class="bg-surface-container-lowest p-1.5 pb-3 border-[2px] border-on-surface shadow-[2px_2px_0px_0px_#0A0A0A] -rotate-1 flex flex-col items-center">
+<div class="w-full h-14 bg-surface-container border border-on-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Grainy black and white portrait of hacker activist in a warehouse maker space wearing headphones, photocopied punk zine print" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVe6SQF3vMVrS4JJRluPMIG2CFJjDizXYi4rkQ4ij0iymnij8i59XL0vsjhmiaR_6APAvCfdjN3Hk3tVaR2W3SxhV9HTQSmptZRt9UzpdzZN5wc2-XQaDuGhCtdoPfYypF6EqSMpBAwVEFT3Uv9eFY6tGLbjEgwCxR0wopPqF5IXPDDCZ1yQo741cboNBK-BhtNAw-51w5Rr3YeAbl_vim_py3p8XAj4xL3BtQCaU"/>
+</div>
+<span class="font-label-code-sm text-label-code-sm font-bold mt-1 text-on-surface">@mod_01</span>
+<span class="font-label-code-sm text-label-code-sm text-outline text-[9px]">12 oct</span>
+</div>
+<!-- Polaroid 2 -->
+<div class="bg-surface-container-lowest p-1.5 pb-3 border-[2px] border-on-surface shadow-[2px_2px_0px_0px_#0A0A0A] rotate-2 flex flex-col items-center">
+<div class="w-full h-14 bg-surface-container border border-on-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="High contrast risograph style photo of zoe holding an off-grid ham radio antenna outside on a rooftop, duotone punk look" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGXrGxoJjEDGHDdTDk3nOyAnVaupp1SbueEuCRZGLir4s_VgucZVfgSudieMzgGT_p6OLuS693nehKhN3-fQbaMoxSAHxI2J3H2P7shaNhysofUs4hMD7wQv-Ztv3O5oZm2JOcwXH3cCYQDMbx92t6DmCj8WKMviW0uVUDUUOuQMZ3OcDai_PoiWceO9Mf_AMF2EHvouooUJdas_mDWmP5_AAtTU4wQAmYpkpr4yk"/>
+</div>
+<span class="font-label-code-sm text-label-code-sm font-bold mt-1 text-on-surface">@zoe.zine</span>
+<span class="font-label-code-sm text-label-code-sm text-outline text-[9px]">13 oct</span>
+</div>
+<!-- Polaroid 3 -->
+<div class="bg-surface-container-lowest p-1.5 pb-3 border-[2px] border-on-surface shadow-[2px_2px_0px_0px_#0A0A0A] -rotate-2 flex flex-col items-center">
+<div class="w-full h-14 bg-surface-container border border-on-surface overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Monochrome contrast photo of kavita soldering a lora mesh antenna node on a cluttered workshop table, underground indie vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnRT6biTHl_1WN3udb9KdTZLww_S7ennjmsyFmvYlrp7K5NBXa_aUSNAtQpGbuZE31WBRoXLmybv8jO9cubRbGZ6C8nm_WFx11TKGJC4ehm_qW6QMJmuRWmkeYI7JljH1DX8lkQd3Ys-xo4V-pvTbDNvNUIw4KfUyKzIppnZ50gwQCPdS_cC0xje2nFE34dHzB0Lnk7I0vDu-Gqxr41InOM7ja7dDU5TApMoY2fdU"/>
+</div>
+<span class="font-label-code-sm text-label-code-sm font-bold mt-1 text-on-surface">@kavita.mesh</span>
+<span class="font-label-code-sm text-label-code-sm text-tertiary text-[9px] font-bold">today</span>
+</div>
+</div>
+</div>
+<!-- PRIMARY CTA: DESK ACCESS -->
+<div class="flex flex-col gap-2 mt-4">
+<button class="w-full py-3.5 bg-surface text-on-surface border-[3px] border-on-surface font-headline-sm text-headline-sm uppercase tracking-tight shadow-[6px_6px_0px_0px_#0A0A0A] active:translate-x-[4px] active:translate-y-[4px] active:shadow-[2px_2px_0px_0px_#0A0A0A] transition-all flex items-center justify-center gap-2" onclick="simulateOpenDesk()">
+<span>open the moderation desk</span>
+<span class="material-symbols-outlined text-[22px]">arrow_forward</span>
+</button>
+<div class="p-2 bg-black/20 border border-white/20 text-center font-label-code-sm text-label-code-sm text-white/90">
+          moderators.vouchedBy: 3/3 consensus reached · cryptographic quorum logged
+        </div>
+</div>
+</div>
+<!-- Quick Rules Reference Pill Box -->
+<div class="bg-surface-container border-[3px] border-on-surface p-space-md shadow-[4px_4px_0px_0px_#0A0A0A]">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-[20px]">gavel</span>
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface">
+          your node responsibilities
+        </span>
+</div>
+<ul class="flex flex-col gap-1.5 font-body-sm text-body-sm text-on-surface-variant lowercase list-disc pl-5">
+<li>you can silence spam bursts without centralized approval.</li>
+<li>banning an offending node requires 2 out of 3 mod agreements.</li>
+<li>vouching for bad actors burns your own trust score in the mesh gossip protocol.</li>
+</ul>
+</div>
+</section>
+</div>
+<script>
+  function switchArtboard(index) {
+    // Hide all artboards
+    for (let i = 1; i <= 3; i++) {
+      const art = document.getElementById('artboard-' + i);
+      const btn = document.getElementById('tab-btn-' + i);
+      if (art) {
+        if (i === index) {
+          art.classList.remove('hidden');
+        } else {
+          art.classList.add('hidden');
+        }
+      }
+      if (btn) {
+        if (i === index) {
+          btn.className = "flex-1 py-1.5 px-2 bg-primary-container text-on-primary-fixed border-[2px] border-on-surface font-label-code-sm text-label-code-sm font-bold tracking-tight text-center whitespace-nowrap shadow-[2px_2px_0px_0px_#0A0A0A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all";
+        } else {
+          btn.className = "flex-1 py-1.5 px-2 bg-surface-container-lowest text-on-surface border-[2px] border-transparent font-label-code-sm text-label-code-sm tracking-tight text-center whitespace-nowrap active:translate-x-[2px] active:translate-y-[2px] transition-all";
+        }
+      }
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function triggerVouchAction() {
+    const btn = document.getElementById('vouch-action-btn');
+    if (!btn) return;
+    btn.innerHTML = '<span>SIGNING & BROADCASTING...</span>';
+    btn.classList.add('bg-primary-container', 'text-on-primary-fixed');
+    btn.classList.remove('bg-tertiary', 'text-on-tertiary');
+    
+    setTimeout(() => {
+      switchArtboard(3);
+    }, 600);
+  }
+
+  function simulateOpenDesk() {
+    alert("jaal // moderation desk unlocked. quorum consensus verified across 3 peer hops.");
+  }
+
+  // Simple pseudo timer simulation for candidate QR code
+  let seconds = 581;
+  const timerEl = document.getElementById('qr-timer');
+  if (timerEl) {
+    setInterval(() => {
+      if (seconds > 0) {
+        seconds--;
+        const m = Math.floor(seconds / 60);
+        const s = seconds % 60;
+        timerEl.textContent = m + ":" + (s < 10 ? "0" : "") + s;
+      }
+    }, 1000);
+  }
+</script></main></body></html>

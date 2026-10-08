@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;family=Space+Grotesk:wght@500;700&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-secondary": "#ffffff", "primary": "#4e6700", "on-error-container": "#93000a", "surface-tint": "#4e6700", "primary-container": "#c6ff00", "secondary-container": "#db1989", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#3a4d00", "on-secondary-fixed": "#3d0022", "inverse-surface": "#31312b", "secondary-fixed": "#ffd9e5", "on-primary-fixed": "#151f00", "surface-bright": "#fcf9f0", "on-tertiary-container": "#3856fa", "on-tertiary-fixed-variant": "#002ccd", "on-surface": "#1c1c17", "on-secondary-container": "#fffbff", "error-container": "#ffdad6", "surface-container-lowest": "#ffffff", "surface-container-high": "#ebe8df", "on-tertiary-fixed": "#000f5d", "tertiary-fixed-dim": "#bbc3ff", "outline": "#747a60", "surface-dim": "#dddad1", "surface-container-low": "#f6f3ea", "on-surface-variant": "#434933", "surface-container": "#f1eee5", "primary-fixed": "#bef500", "surface": "#fcf9f0", "on-secondary-fixed-variant": "#8c0055", "on-background": "#1c1c17", "inverse-primary": "#a6d700", "background": "#fcf9f0", "on-primary": "#ffffff", "tertiary-container": "#eaeaff", "tertiary": "#2848ee", "tertiary-fixed": "#dee0ff", "primary-fixed-dim": "#a6d700", "on-primary-container": "#587300", "outline-variant": "#c3caac", "surface-variant": "#e5e2da", "secondary": "#b3006e", "secondary-fixed-dim": "#ffb0ce", "on-error": "#ffffff", "error": "#ba1a1a", "inverse-on-surface": "#f4f1e8", "surface-container-highest": "#e5e2da" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-md": "0.75rem", "space-xl": "2rem", "space-lg": "1.25rem", "gutter": "0.75rem", "margin": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem" }, fontFamily: { "body-md": ["Space Grotesk"], "display-xl": ["Space Grotesk"], "headline-sm": ["Space Grotesk"], "body-sm": ["Space Grotesk"], "label-code-sm": ["Space Mono"], "headline-lg": ["Space Grotesk"], "hand-note": ["Caveat"], "body-lg": ["Space Grotesk"], "display-xl-mobile": ["Space Grotesk"], "label-code-lg": ["Space Mono"], "headline-md": ["Space Grotesk"] }, fontSize: { "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }], "display-xl": ["56px", { "lineHeight": "54px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "22px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "18px", "fontWeight": "500" }], "label-code-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "400" }], "headline-lg": ["36px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "hand-note": ["22px", { "lineHeight": "24px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "22px", "fontWeight": "500" }], "display-xl-mobile": ["40px", { "lineHeight": "40px", "letterSpacing": "-0.04em", "fontWeight": "700" }], "label-code-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "700" }], "headline-md": ["26px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "700" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fcf9f0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/90 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="close" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()" type="button"><span class="material-symbols-outlined text-[24px]">close</span></button><h1 class="font-headline-sm text-headline-sm tracking-tight text-on-surface lowercase">New Drop</h1></div><div class="flex items-center gap-space-sm"><button class="min-h-[44px] px-space-md py-space-xs bg-primary-container text-on-primary-fixed font-headline-sm text-headline-sm lowercase flex items-center justify-center shadow-[3px_3px_0px_0px_#0A0A0A] active:translate-x-[3px] active:translate-y-[3px] active:shadow-none transition-all" type="button">drop</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-margin pt-16 bg-surface pb-safe min-h-screen"><div class="flex flex-col w-full pb-10">
+<!-- Sub-header Divider Bar -->
+<div class="w-full h-[3px] bg-on-surface mb- space-md"></div>
+<!-- Selected Photo Stage with Masking Tape -->
+<div class="relative w-full mb-space-lg pt-3">
+<!-- Top-left Masking Tape -->
+<div class="absolute -top-1 left-4 z-20 w-24 h-[18px] bg-[#f9e27a]/90 shadow-[1px_1px_0px_rgba(0,0,0,0.15)] -rotate-3" style="clip-path: polygon(4% 0%, 96% 0%, 100% 100%, 0% 100%);"></div>
+<!-- Top-right Masking Tape -->
+<div class="absolute -top-1 right-4 z-20 w-20 h-[18px] bg-[#f9e27a]/90 shadow-[1px_1px_0px_rgba(0,0,0,0.15)] rotate-2" style="clip-path: polygon(0% 0%, 98% 0%, 93% 100%, 3% 100%);"></div>
+<!-- Main Photo Frame (4:5 Aspect Ratio) -->
+<div class="relative w-full aspect-[4/5] bg-surface-container-highest shadow-[6px_6px_0px_0px_#0A0A0A] overflow-hidden -rotate-[0.5deg]">
+<img class="w-full h-full object-cover grayscale contrast-125 filter" data-alt="High contrast black and white grainy 35mm film photograph of a contemplative young person in a hoodie sitting on a rainy night bus, looking out the glass window reflecting city streetlights, stark xerox punk zine halftone texture with dark heavy contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEfNnrH0JV4BVi5swLWmpWAZVdWdUWcivQGvSDZxLs1_yp8TKOHoXimt7bN_WKNo3JR0WlJNuySWV-oWBbxMaKVKoe4caI3IrbqshEk5tgyZNGNXtY5TceOqvHgybbsNTVvaSdAhmTHfTzoNupTJuit2ccHTsKPCXlNfKMRxMzdBc12Cb77qnXk7UQScybSz3F6YFBh_JVEQkvfXdkVYOj-Y7o1myykmRQ-FutyTw"/>
+<!-- Top-left Xerox Stamp Overlay -->
+<div class="absolute top-3 left-3 bg-surface text-on-surface px-space-xs py-[2px] font-label-code-sm text-label-code-sm uppercase tracking-wider shadow-[2px_2px_0px_0px_#0A0A0A]">
+        [ 01/01 · b&amp;w xerox ]
+      </div>
+<!-- Mesh packet badge bottom-left -->
+<div class="absolute bottom-3 left-3 bg-primary-container text-on-primary-fixed px-space-xs py-[2px] font-label-code-sm text-label-code-sm lowercase shadow-[2px_2px_0px_0px_#0A0A0A]">
+        ⚡ 412 kb ready
+      </div>
+<!-- Analog corner notch aesthetic -->
+<div class="absolute bottom-3 right-3 w-6 h-6 bg-surface flex items-center justify-center font-label-code-sm text-label-code-sm text-on-surface">
+        #01
+      </div>
+</div>
+</div>
+<!-- Horizontal Filmstrip Media Picker -->
+<div class="flex flex-col w-full mb-space-lg">
+<div class="flex items-center justify-between mb-space-xs px-1">
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant lowercase tracking-wider">// filmstrip picker</span>
+<span class="font-hand-note text-hand-note text-tertiary -rotate-1">pick 1 frame</span>
+</div>
+<!-- Filmstrip Scroll Container -->
+<div class="flex gap-space-sm overflow-x-auto pb-space-xs pt-1 no-scrollbar -mx-margin px-margin">
+<!-- Slot 1: Active Selected -->
+<button class="relative flex-shrink-0 w-20 h-20 bg-surface-container shadow-[3px_3px_0px_0px_#0A0A0A] overflow-hidden group" type="button">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Close up thumbnail of a youth riding a rainy bus in high contrast halftone black and white photocopy aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9rgAG0IzvKYru9wDooX67J06reXctUfqK0MR77yp7qlagIepfQqs-aLO2H_61nRT9FoEQBFWkKoboxywyeFofTZ8Uyn36VTYLNkUD693af3_pqER1PKk_nEFXxb6Z7yvJjV5J83uzU_8wsqc5hL33ETiPGWokdviR8KQRluuP566j3KmuwIp_VLa6aIRzHiMVhwhyZuMu61ZycOVmwtSVMUhBJroREtokdfKMHJ8"/>
+<div class="absolute top-1 right-1 w-4 h-4 bg-primary-container text-on-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[13px] font-bold">check</span>
+</div>
+<div class="absolute bottom-0 inset-x-0 bg-primary-container text-on-primary-fixed font-label-code-sm text-[9px] text-center font-bold">active</div>
+</button>
+<!-- Slot 2: Market Zine Stall -->
+<button class="relative flex-shrink-0 w-20 h-20 bg-surface-container shadow-[2px_2px_0px_0px_#0A0A0A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all overflow-hidden" type="button">
+<img alt="DIY Punk zine stall night market" class="w-full h-full object-cover grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/AEtjO1XzhXGh_qtZXXjqqDTEyVqBLH2JZDS1xxqdj3Gn1D2nsDwh6wvvFx4hoR-B_Es6zDHd6cmUaCv6jBiT_kARBg5iR0gCiXT1MKSJ2M4aMOVC9Ocoz4h-ri1P-tbCdJOE32IdvSlbigw1gUCYSucO3A_BEQpsFfV1FZj22siRO32C3hSdZQVLXUIMNraL29IQAWUisxrpa3dAIJM9ksDUhxiTYT0dq7d_S3q9CoFd5UQq"/>
+<div class="absolute bottom-1 right-1 bg-surface/90 text-on-surface font-label-code-sm text-[9px] px-1">02</div>
+</button>
+<!-- Slot 3: Hiking / Ridge Trail -->
+<button class="relative flex-shrink-0 w-20 h-20 bg-surface-container shadow-[2px_2px_0px_0px_#0A0A0A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all overflow-hidden" type="button">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Black and white high contrast xerox halftone print of hikers backpacking across a mountain ridge spine trail into clouds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFzxuTTNGCjEMTUAjfANcxWh2z1JQPoRplszNM7BvATjpRFUNgdaQ5Q17t6OPbUrunQnuKTxAr5EfJIiuyzSV_HMVjtZI2OgE1HkGYB6xUmFn8m8SOEY7kZQf7Hbja_nClBcl85jJG1wrWyR38-CoBkpOmeSE0LN8DsEOmaB0IvJ3k2Qkxjb-JYZLSTDQcjMm5vsT9AAfWuiVu2Gm2g-f685VfH1UfuqQM7e_w2Lg"/>
+<div class="absolute bottom-1 right-1 bg-surface/90 text-on-surface font-label-code-sm text-[9px] px-1">03</div>
+</button>
+<!-- Slot 4: Urban crowd street -->
+<button class="relative flex-shrink-0 w-20 h-20 bg-surface-container shadow-[2px_2px_0px_0px_#0A0A0A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all overflow-hidden" type="button">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Rough xerox photocopy of an underground punk basement concert crowd with raised fists and vintage noise grit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjScagEjWDyuL6ZETrWNK5gjPX-OSIytx_v3MXomeLcuPeJeIFJfAWZB7WjIB_rlpCwUQygRphwmpivRQ-oX4Dn_cs0LbqHZasiKy2lE-fRtxeYuiy75P8fWbj4r0cCRRd2dIH1Hxm6PZOGXcYqtWc8IiGH0yCnMMvgO7AdlcdOcK89uXuXQ41DUEfOMUXSOWXIkCoDNSxOoEz2YxuLSzr6vQ7G9HPBuVMSTlG6j8"/>
+<div class="absolute bottom-1 right-1 bg-surface/90 text-on-surface font-label-code-sm text-[9px] px-1">04</div>
+</button>
+<!-- Slot 5: Camera Trigger -->
+<button class="flex-shrink-0 w-20 h-20 bg-surface-container-high flex flex-col items-center justify-center gap-1 shadow-[2px_2px_0px_0px_#0A0A0A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" type="button">
+<span class="material-symbols-outlined text-[20px] text-on-surface">photo_camera</span>
+<span class="font-label-code-sm text-[10px] text-on-surface lowercase">+ camera</span>
+</button>
+<!-- Slot 6: Video Snippet (max 30s) -->
+<button class="flex-shrink-0 w-20 h-20 bg-surface-container-high flex flex-col items-center justify-center gap-1 shadow-[2px_2px_0px_0px_#0A0A0A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" type="button">
+<span class="material-symbols-outlined text-[20px] text-on-surface">videocam</span>
+<span class="font-label-code-sm text-[9px] text-secondary lowercase">max 30s</span>
+</button>
+</div>
+</div>
+<!-- Media Crunch & Packet Slicing Telemetry -->
+<div class="w-full bg-surface-container-low shadow-[4px_4px_0px_0px_#0A0A0A] p-space-md mb-space-lg flex flex-col gap-space-sm rotate-[0.3deg]">
+<!-- Header row -->
+<div class="flex items-center justify-between flex-wrap gap-1">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[1px_1px_0px_#000]"></span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface font-bold lowercase">telemetry // packet chunking</span>
+</div>
+<span class="font-label-code-sm text-label-code-sm text-on-surface-variant bg-surface-container px-1 shadow-[1px_1px_0px_#0A0A0A]">hash: #9b2f..c1</span>
+</div>
+<!-- Stats Chip Row -->
+<div class="flex items-center justify-between text-on-surface bg-surface p-space-xs shadow-[2px_2px_0px_0px_#0A0A0A]">
+<span class="font-label-code-sm text-label-code-sm">photo · 1.8 mb → <span class="bg-primary-container px-1 font-bold">412 kb</span></span>
+<span class="font-label-code-sm text-label-code-sm bg-on-surface text-surface px-1 font-bold">7 chunks</span>
+</div>
+<!-- Interactive Crunch Toggle -->
+<div class="flex items-center justify-between pt-1">
+<span class="font-hand-note text-hand-note text-tertiary">crunch more (travels faster via BLE) ⚡</span>
+<button class="w-11 h-6 bg-primary-container shadow-[2px_2px_0px_0px_#0A0A0A] flex items-center p-0.5 transition-colors" id="crunch-toggle" onclick="this.classList.toggle('bg-primary-container'); this.classList.toggle('bg-surface-container-high');" type="button">
+<div class="w-5 h-5 bg-on-surface shadow-[1px_1px_0px_#000] ml-auto"></div>
+</button>
+</div>
+<!-- Visual Puzzle-Piece Chunking Diagram (7 interlocking gossip slices) -->
+<div class="w-full bg-surface-container p-space-xs mt-1">
+<div class="flex items-center justify-between mb-1">
+<span class="font-label-code-sm text-[10px] text-on-surface lowercase">gossip slice layout [58kb each]</span>
+<span class="font-label-code-sm text-[10px] text-primary lowercase">5 ready / 2 queued</span>
+</div>
+<!-- Interactive Sliced Grid Illustration -->
+<div class="grid grid-cols-7 gap-1 w-full h-12 bg-surface p-1 shadow-[inset_2px_2px_0px_rgba(0,0,0,0.12)]">
+<!-- Chunks 1 to 5 (Lime - Packed) -->
+<div class="bg-primary-container flex flex-col items-center justify-center text-on-primary-fixed shadow-[1px_1px_0px_#0A0A0A]">
+<span class="font-label-code-sm text-[9px] font-bold">#1</span>
+<span class="font-label-code-sm text-[7px]">58k</span>
+</div>
+<div class="bg-primary-container flex flex-col items-center justify-center text-on-primary-fixed shadow-[1px_1px_0px_#0A0A0A]">
+<span class="font-label-code-sm text-[9px] font-bold">#2</span>
+<span class="font-label-code-sm text-[7px]">58k</span>
+</div>
+<div class="bg-primary-container flex flex-col items-center justify-center text-on-primary-fixed shadow-[1px_1px_0px_#0A0A0A]">
+<span class="font-label-code-sm text-[9px] font-bold">#3</span>
+<span class="font-label-code-sm text-[7px]">58k</span>
+</div>
+<div class="bg-primary-container flex flex-col items-center justify-center text-on-primary-fixed shadow-[1px_1px_0px_#0A0A0A]">
+<span class="font-label-code-sm text-[9px] font-bold">#4</span>
+<span class="font-label-code-sm text-[7px]">58k</span>
+</div>
+<div class="bg-primary-container flex flex-col items-center justify-center text-on-primary-fixed shadow-[1px_1px_0px_#0A0A0A]">
+<span class="font-label-code-sm text-[9px] font-bold">#5</span>
+<span class="font-label-code-sm text-[7px]">58k</span>
+</div>
+<!-- Chunks 6 and 7 (Queued / Dimmed Slices) -->
+<div class="bg-surface-dim flex flex-col items-center justify-center text-on-surface-variant shadow-[1px_1px_0px_#0A0A0A] opacity-75">
+<span class="font-label-code-sm text-[9px]">#6</span>
+<span class="font-label-code-sm text-[7px]">sync</span>
+</div>
+<div class="bg-surface-dim flex flex-col items-center justify-center text-on-surface-variant shadow-[1px_1px_0px_#0A0A0A] opacity-75">
+<span class="font-label-code-sm text-[9px]">#7</span>
+<span class="font-label-code-sm text-[7px]">sync</span>
+</div>
+</div>
+<div class="mt-1 font-label-code-sm text-[10px] text-on-surface-variant lowercase">
+        chunker.manifestfor(media) // cuts into 7 pocket-sized packets
+      </div>
+</div>
+</div>
+<!-- Sunken Caption Composer Field -->
+<div class="flex flex-col w-full mb-space-lg">
+<div class="flex items-center justify-between mb-space-xs px-1">
+<span class="font-label-code-sm text-label-code-sm text-on-surface lowercase">// write dispatch</span>
+<span class="font-hand-note text-hand-note text-tertiary">ink doesn't wash off</span>
+</div>
+<!-- Sunken text container -->
+<div class="w-full bg-surface-container-high shadow-[4px_4px_0px_0px_#0A0A0A] p-space-md">
+<textarea class="w-full bg-transparent text-on-surface font-body-md text-body-md placeholder:text-on-surface-variant/70 placeholder:font-label-code-sm focus:outline-none resize-none" id="dispatch-caption" maxlength="2200" placeholder="say something offline… (lyrics, bootleg frequency, trail note, zine distro address)" rows="4"></textarea>
+<!-- Counter & Character Limit -->
+<div class="flex justify-between items-center pt-2 mt-2 bg-surface-container-highest px-space-xs">
+<span class="font-label-code-sm text-[10px] text-on-surface-variant lowercase">offline text encrypted via ed25519</span>
+<span class="font-label-code-sm text-label-code-sm text-on-surface font-bold" id="char-counter">0 / 2200</span>
+</div>
+</div>
+<!-- Formatting Pill Row -->
+<div class="flex items-center gap-space-xs overflow-x-auto pt-space-xs no-scrollbar">
+<button class="flex-shrink-0 bg-surface-container px-space-sm py-1 font-label-code-sm text-label-code-sm text-on-surface shadow-[2px_2px_0px_0px_#0A0A0A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">alternate_email</span>
+<span>+ tag peer</span>
+</button>
+<button class="flex-shrink-0 bg-surface-container px-space-sm py-1 font-label-code-sm text-label-code-sm text-on-surface shadow-[2px_2px_0px_0px_#0A0A0A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">mic</span>
+<span>+ tape audio snippet</span>
+</button>
+<button class="flex-shrink-0 bg-surface-container px-space-sm py-1 font-label-code-sm text-label-code-sm text-on-surface shadow-[2px_2px_0px_0px_#0A0A0A] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">sell</span>
+<span>add sticker slot</span>
+</button>
+</div>
+</div>
+<!-- "WHO GETS IT" Mesh Distribution Scope Card -->
+<div class="relative w-full bg-surface-container-low shadow-[5px_5px_0px_0px_#0A0A0A] p-space-md mb-space-xl rotate-1">
+<!-- Pinned tape strip at card top corner -->
+<div class="absolute -top-3 right-6 z-10 bg-[#f9e27a]/90 text-on-surface px-space-sm py-0.5 font-label-code-sm text-[10px] tracking-wider uppercase shadow-[1px_1px_0px_rgba(0,0,0,0.2)] -rotate-2" style="clip-path: polygon(2% 0%, 98% 0%, 95% 100%, 0% 100%);">
+      note #04 · dispatch scope
+    </div>
+<div class="font-headline-sm text-headline-sm text-on-surface lowercase mb-space-sm flex items-center gap-2">
+<span>who gets it?</span>
+<span class="font-hand-note text-hand-note text-secondary lowercase">(mesh radius)</span>
+</div>
+<!-- Radio Options -->
+<div class="flex flex-col gap-space-sm mb-space-sm">
+<!-- Option 1: Followers / Mesh Gossip (Selected) -->
+<label class="flex items-start gap-space-sm bg-surface p-space-sm shadow-[3px_3px_0px_0px_#0A0A0A] cursor-pointer">
+<div class="mt-0.5 w-5 h-5 bg-on-surface flex items-center justify-center flex-shrink-0 shadow-[1px_1px_0px_#000]">
+<div class="w-2.5 h-2.5 bg-primary-container"></div>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-lg text-body-lg text-on-surface lowercase font-bold">followers (travels through the mesh)</span>
+<span class="bg-primary-container text-on-primary-fixed font-label-code-sm text-[9px] px-1 font-bold">public relay</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant lowercase">
+            relays across passing phones over bluetooth &amp; wi-fi direct without cell towers
+          </span>
+</div>
+</label>
+<!-- Option 2: Sealed Peer Message (Disabled/Locked) -->
+<label class="flex items-start gap-space-sm bg-surface-container-high p-space-sm shadow-[2px_2px_0px_0px_#0A0A0A] opacity-80 cursor-not-allowed">
+<div class="mt-0.5 w-5 h-5 bg-surface-container-highest flex items-center justify-center flex-shrink-0 shadow-[1px_1px_0px_#000]"></div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-body-lg text-body-lg text-on-surface lowercase">close friends (sealed)</span>
+<span class="material-symbols-outlined text-[15px] text-on-surface">lock</span>
+<span class="bg-surface text-on-surface-variant font-label-code-sm text-[9px] px-1">soon</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant lowercase">
+            envelope encrypted to pairwise keys only
+          </span>
+</div>
+</label>
+</div>
+<!-- Handwritten blue Caveat memo -->
+<div class="mt-1 flex items-start gap-1">
+<span class="font-hand-note text-hand-note text-tertiary">
+        "it leaves your phone when someone walks by. could be 1 minute, could be 2 days."
+      </span>
+</div>
+</div>
+<!-- Postmark Rubber Stamp Preview & Verification Stamp -->
+<div class="w-full flex flex-col items-center justify-center pt-space-xs pb-space-lg">
+<div class="relative w-44 h-44 rounded-full bg-error-container/20 flex flex-col items-center justify-center p-3 text-center -rotate-6 shadow-[3px_3px_0px_0px_rgba(215,38,61,0.25)]">
+<!-- Stamp Concentric Ring Effect -->
+<div class="w-full h-full rounded-full flex flex-col items-center justify-center p-2 text-error">
+<span class="font-label-code-sm text-[9px] uppercase tracking-wider font-bold">jaal origin dispatch</span>
+<div class="w-16 h-[2px] bg-error my-1"></div>
+<span class="font-headline-sm text-headline-sm text-error leading-tight font-bold">0 hops</span>
+<span class="font-label-code-sm text-[9px] lowercase tracking-widest text-error">not sent yet</span>
+<div class="w-16 h-[2px] bg-error my-1"></div>
+<span class="font-label-code-sm text-[8px] uppercase tracking-wider text-error font-bold">local pocket // queued</span>
+</div>
+</div>
+<!-- Final Micro-telemetry Status Footer -->
+<div class="mt-space-md flex flex-col items-center text-center gap-1">
+<div class="bg-surface-container px-space-md py-space-xs shadow-[2px_2px_0px_0px_#0A0A0A]">
+<span class="font-label-code-sm text-label-code-sm text-on-surface lowercase">
+          bip-39 identity signed · zero cloud · peer gossip ready
+        </span>
+</div>
+<span class="font-hand-note text-hand-note text-tertiary">
+        ready to scatter across the city ⚡
+      </span>
+</div>
+</div>
+</div>
+<script>
+  // Character counter dynamic reflection
+  const captionInput = document.getElementById('dispatch-caption');
+  const counterLabel = document.getElementById('char-counter');
+  if (captionInput && counterLabel) {
+    captionInput.addEventListener('input', (e) => {
+      const len = e.target.value.length;
+      counterLabel.textContent = `${len} / 2200`;
+      if (len > 0) {
+        counterLabel.classList.add('text-primary');
+      } else {
+        counterLabel.classList.remove('text-primary');
+      }
+    });
+  }
+</script></main></body></html>

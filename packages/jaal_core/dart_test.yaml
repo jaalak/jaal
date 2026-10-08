@@ -1,0 +1,9 @@
+tags:
+  stress:
+    skip: "slow (~3 min with pure-Dart crypto); run with: dart test -P stress"
+
+presets:
+  stress:
+    tags:
+      stress:
+        skip: false

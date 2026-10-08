@@ -1,0 +1,196 @@
+{
+  "project": "projects/1263145211321119280",
+  "projectTitle": "Jaal Off-Grid Design System",
+  "fetched": "2026-10-08T07:15:41.294Z",
+  "screens": [
+    {
+      "dir": "00-style-tile",
+      "file": "screen",
+      "id": "d5a10e1600464767a5412ce8c1a874b2",
+      "title": "Style Tile — Off-Grid Zine",
+      "w": "780",
+      "h": "5572"
+    },
+    {
+      "dir": "01-welcome",
+      "file": "screen",
+      "id": "b382927361244c8691bdac822219853f",
+      "title": "Welcome — jaal (First Launch)",
+      "w": "780",
+      "h": "1768"
+    },
+    {
+      "dir": "02-forge-keys",
+      "file": "screen",
+      "id": "934c03db9385478a9f9e2c15350e1530",
+      "title": "New Node — Forge Identity",
+      "w": "780",
+      "h": "2342"
+    },
+    {
+      "dir": "03-recovery-phrase",
+      "file": "screen",
+      "id": "4aed48f1e3b04383aae9ac5c0fc3677b",
+      "title": "Your 24 Words — jaal Recovery Phrase",
+      "w": "780",
+      "h": "2202"
+    },
+    {
+      "dir": "04-home-feed",
+      "file": "screen",
+      "id": "4e23cfb263f14c61ab1129818d828cba",
+      "title": "Home Feed — jaal Off-Grid Mesh",
+      "w": "780",
+      "h": "3956"
+    },
+    {
+      "dir": "05-post-detail",
+      "file": "screen",
+      "id": "d38af96fdfbf4f34902f77e4a08bef7e",
+      "title": "Post Detail — jaal Off-Grid Mesh",
+      "w": "780",
+      "h": "3100"
+    },
+    {
+      "dir": "06-sticker-slap",
+      "file": "screen",
+      "id": "745b889976954a7cbed5215f88bad803",
+      "title": "Sticker Slap Interaction — jaal",
+      "w": "780",
+      "h": "2202"
+    },
+    {
+      "dir": "07-compose",
+      "file": "screen",
+      "id": "651934e63dd94e38a07d80190faa20d1",
+      "title": "New Drop — jaal Compose Post",
+      "w": "780",
+      "h": "3672"
+    },
+    {
+      "dir": "08-profile",
+      "file": "screen",
+      "id": "cd5d46ba2f904722a13ca0dfe04913cc",
+      "title": "Profile (Scrapbook) — jaal Off-Grid Mesh",
+      "w": "780",
+      "h": "2498"
+    },
+    {
+      "dir": "09-qr-meet",
+      "file": "screen",
+      "id": "9de4e01f1044420ab52d94cfdcd662cd",
+      "title": "Meet in Person (QR Swap / Verify) — jaal",
+      "w": "780",
+      "h": "3108"
+    },
+    {
+      "dir": "10-nearby",
+      "file": "screen",
+      "id": "b2fa2c87c58e4678990518575d349c36",
+      "title": "Nearby (Radar Wall) — jaal Off-Grid Mesh",
+      "w": "780",
+      "h": "2608"
+    },
+    {
+      "dir": "12-chat-thread",
+      "file": "screen",
+      "id": "6f496635e45346b28fa79043d718110e",
+      "title": "1:1 Chat — Zoe (@zoe.zine·m3qa)",
+      "w": "780",
+      "h": "2164"
+    },
+    {
+      "dir": "13-carry-pouch",
+      "file": "screen",
+      "id": "8ce84eacc7574ce5907a6169f86f1f03",
+      "title": "Carry Pouch & Courier Clout — jaal",
+      "w": "780",
+      "h": "4880"
+    },
+    {
+      "dir": "15-settings",
+      "file": "screen",
+      "id": "d0b300638c564bf289dfd7841b1170c8",
+      "title": "Settings — jaal Off-Grid Mesh",
+      "w": "780",
+      "h": "4298"
+    },
+    {
+      "dir": "16-network-lab",
+      "file": "screen",
+      "id": "e1bd22d6a8f348bab86f1b8d6052a14a",
+      "title": "Network Lab (Developer Diagnostics) — jaal",
+      "w": "780",
+      "h": "3424"
+    },
+    {
+      "dir": "17-become-moderator",
+      "file": "screen",
+      "id": "bff9f1b45b2c4a5ca8113464aef89e8a",
+      "title": "Become a Moderator — jaal Off-Grid Mesh",
+      "w": "780",
+      "h": "2426"
+    },
+    {
+      "dir": "18-moderation-desk",
+      "file": "screen",
+      "id": "8317faaefde94806ba33b6d180fa0ec4",
+      "title": "Moderation Desk (Removing Toxic People) — jaal",
+      "w": "780",
+      "h": "4510"
+    },
+    {
+      "dir": "19-trust-safety-states",
+      "file": "screen",
+      "id": "1e86adc3d91a4cf1a5b9736be1e4e85b",
+      "title": "Trust & Safety States — jaal Off-Grid Zine",
+      "w": "780",
+      "h": "4534"
+    },
+    {
+      "dir": "assets",
+      "file": "photo-1",
+      "id": "2b44307bf7454df0b6fceddd50a4d11d",
+      "title": "High contrast black and white halftone photocopy photograph of an underground indie zine stall and DIY punk art table at a dimly lit night market, pamphlets, handmade zines and screenprints on display, candid 35mm film grain, photocopied punk zine aesthetic, stark xerox texture.",
+      "w": "1200",
+      "h": "896"
+    },
+    {
+      "dir": "assets",
+      "file": "photo-2",
+      "id": "72305ec84a384d7c98b45ed13f5888e7",
+      "title": "High contrast black and white halftone photocopy photograph of friends trekking on a grassy mountain hill ridge, candid 35mm film grain, photocopied punk zine aesthetic, stark xerox texture.",
+      "w": "1024",
+      "h": "1024"
+    },
+    {
+      "dir": "assets",
+      "file": "photo-3",
+      "id": "2ce6bb953c4f4812b3985cc0c94f6e43",
+      "title": "High contrast black and white halftone photocopy photograph of a young person looking out of a city bus window with rainy reflection, moody candid 35mm film grain, photocopied punk zine aesthetic, xerox texture.",
+      "w": "1024",
+      "h": "1024"
+    },
+    {
+      "dir": "assets",
+      "file": "photo-4",
+      "id": "2b2374afce4247e8a85cbb7f5f5c0e0e",
+      "title": "High contrast black and white halftone photocopy photograph of a cool young person holding an analog 35mm film camera in front of their face, candid indie snapshot, gritty punk zine aesthetic, stark xerox texture, high contrast grainy film look.",
+      "w": "1024",
+      "h": "1024"
+    },
+    {
+      "dir": "assets",
+      "file": "photo-5",
+      "id": "fbb9e3de69d1480c91784ec66a7e2592",
+      "title": "High contrast black and white halftone photocopy photograph of an outdoor music festival crowd with raised hands, candid flash photography, photocopied punk zine aesthetic, grit, xerox texture.",
+      "w": "1024",
+      "h": "1024"
+    }
+  ],
+  "note": "Screenshots only. Stitch HTML exports need a signed-in browser (Export code → save as NN-*/screen.html).",
+  "missing": [
+    "11-inbox",
+    "14-explore"
+  ]
+}

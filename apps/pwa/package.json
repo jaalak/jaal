@@ -1,0 +1,35 @@
+{
+  "name": "jaal-pwa",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Jaal for iPhone (and any browser): same protocol as the Android app, offline-first, syncs over WebRTC.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@noble/ciphers": "^2.4.0",
+    "@noble/curves": "^2.4.0",
+    "@noble/hashes": "^2.4.0",
+    "@scure/bip39": "^2.4.0",
+    "idb": "^8.0.4",
+    "jsqr": "^1.4.0",
+    "preact": "^11.0.1",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.6",
+    "@types/node": "^26.6.4",
+    "@types/qrcode": "^1.5.6",
+    "@types/ws": "^8.18.2",
+    "fake-indexeddb": "^6.2.5",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.0.3",
+    "ws": "^8.22.0"
+  }
+}

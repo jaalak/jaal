@@ -1,0 +1,11 @@
+name: jaal_workspace
+description: Jaal monorepo (Dart pub workspace).
+publish_to: none
+
+environment:
+  sdk: ^3.13.0
+
+workspace:
+  - packages/jaal_core
+  - packages/jaal_sim
+  - apps/mobile
