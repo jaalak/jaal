@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Get the App — jaal Off-Grid Mesh</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caveat:wght@600;700&family=Space+Grotesk:wght@500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    :root {
+      --bg-surface: #FCF9F0;
+      --bg-surface-dim: #F0ECE1;
+      --bg-surface-deep: #E9E3D3;
+      --ink: #121212;
+      --lime: #C6FF00;
+      --pink: #FF3EA5;
+      --blue: #3D5AFE;
+      --red: #D7263D;
+      --yellow: #FFE500;
+      --tape: #F4E7A2;
+      --border-ink: 3px solid #121212;
+      --shadow-hard: 4px 4px 0px #121212;
+      --shadow-hard-lg: 6px 6px 0px #121212;
+      --shadow-pressed: 1px 1px 0px #121212;
+    }
+
+    body {
+      background-color: #121212;
+      font-family: 'Space Grotesk', -apple-system, sans-serif;
+      color: var(--ink);
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 0;
+    }
+
+    /* Mobile Frame (iPhone 390px width) */
+    .iphone-frame {
+      width: 100%;
+      max-width: 390px;
+      min-height: 100vh;
+      background-color: var(--bg-surface);
+      background-image: 
+        radial-gradient(circle at 1px 1px, rgba(18, 18, 18, 0.08) 1px, transparent 0),
+        linear-gradient(rgba(18,18,18,0.02) 1px, transparent 1px);
+      background-size: 16px 16px, 100% 24px;
+      position: relative;
+      border-left: 2px solid #222;
+      border-right: 2px solid #222;
+      box-shadow: 0 0 50px rgba(0,0,0,0.7);
+      padding-bottom: 96px; /* tab bar cushion */
+      overflow-x: hidden;
+    }
+
+    /* Top App Bar */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 16px;
+      border-bottom: 3px solid var(--ink);
+      background: var(--bg-surface);
+      position: sticky;
+      top: 0;
+      z-index: 40;
+    }
+
+    .top-bar-brand {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .status-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--lime);
+      border: 1.5px solid var(--ink);
+      box-shadow: 1px 1px 0px var(--ink);
+      display: inline-block;
+    }
+
+    .badge-pwa {
+      background: var(--yellow);
+      border: 1.5px solid var(--ink);
+      padding: 2px 6px;
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      transform: rotate(-1deg);
+      box-shadow: 2px 2px 0px var(--ink);
+    }
+
+    /* Main Scroll Content */
+    .page-content {
+      padding: 16px 16px 24px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    /* Masking tape header strip */
+    .tape-strip {
+      align-self: flex-start;
+      background: var(--tape);
+      border: 2px dashed #998c48;
+      box-shadow: 2px 3px 0px rgba(0,0,0,0.12);
+      padding: 4px 12px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transform: rotate(-2deg);
+      position: relative;
+    }
+    .tape-strip::before, .tape-strip::after {
+      content: "";
+      position: absolute;
+      top: 0; bottom: 0; width: 4px;
+      background: rgba(255,255,255,0.4);
+    }
+    .tape-strip::before { left: 0; }
+    .tape-strip::after { right: 0; }
+
+    /* Headline Area */
+    .headline-block {
+      position: relative;
+      margin-top: -4px;
+    }
+
+    h1.headline {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 40px;
+      line-height: 0.95;
+      letter-spacing: -1.5px;
+      color: var(--ink);
+      text-transform: lowercase;
+    }
+
+    .lime-swipe {
+      position: relative;
+      display: inline-block;
+      white-space: nowrap;
+      z-index: 1;
+    }
+    .lime-swipe::after {
+      content: "";
+      position: absolute;
+      left: -4px;
+      right: -4px;
+      bottom: 2px;
+      height: 18px;
+      background: var(--lime);
+      border: 2px solid var(--ink);
+      z-index: -1;
+      transform: rotate(-1.5deg);
+      box-shadow: 2px 2px 0px var(--ink);
+    }
+
+    .hand-annotation {
+      font-family: 'Caveat', cursive;
+      font-size: 19px;
+      font-weight: 700;
+      color: var(--blue);
+      line-height: 1.1;
+      margin-top: 8px;
+      transform: rotate(-1deg);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Hero Phone Cutout */
+    .hero-phone-wrap {
+      position: relative;
+      margin: 8px auto 6px auto;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .hero-phone {
+      background: #FFFFFF;
+      border: var(--border-ink);
+      box-shadow: var(--shadow-hard-lg);
+      transform: rotate(-2deg);
+      border-radius: 18px;
+      padding: 12px 10px 14px 10px;
+      position: relative;
+      background-image: 
+        radial-gradient(#121212 0.75px, transparent 0.75px),
+        radial-gradient(#e5dfd0 0.75px, #fff 0.75px);
+      background-size: 12px 12px;
+      overflow: visible;
+    }
+
+    /* Speaker notch */
+    .phone-notch {
+      width: 48px;
+      height: 4px;
+      background: var(--ink);
+      border-radius: 3px;
+      margin: 0 auto 10px auto;
+    }
+
+    /* Screen preview inside phone */
+    .phone-screen-inner {
+      background: #F8F5EC;
+      border: 2px solid var(--ink);
+      border-radius: 10px;
+      padding: 8px;
+      box-shadow: inset 1px 1px 3px rgba(0,0,0,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mini-feed-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      padding-bottom: 6px;
+      border-bottom: 1.5px dashed var(--ink);
+      margin-bottom: 8px;
+    }
+
+    /* Polaroid card in phone */
+    .mini-polaroid {
+      background: #FFFFFF;
+      border: 2px solid var(--ink);
+      padding: 6px 6px 12px 6px;
+      box-shadow: 2px 2px 0px var(--ink);
+      transform: rotate(1deg);
+      margin-bottom: 6px;
+    }
+
+    .mini-photo-halftone {
+      height: 95px;
+      background-color: #2b2b2b;
+      background-image: radial-gradient(#d5d5d5 15%, transparent 16%), radial-gradient(#d5d5d5 15%, transparent 16%);
+      background-size: 6px 6px;
+      background-position: 0 0, 3px 3px;
+      border: 1.5px solid var(--ink);
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      padding: 4px;
+    }
+
+    .mini-photo-overlay-tag {
+      background: var(--ink);
+      color: #fff;
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      font-weight: 700;
+      padding: 1px 4px;
+    }
+
+    .mini-caption {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      margin-top: 6px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    /* Red Rubber Postmark Stamp */
+    .stamp-postmark {
+      position: absolute;
+      top: 14px;
+      right: 12px;
+      border: 2.5px solid var(--red);
+      color: var(--red);
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 6px;
+      text-transform: uppercase;
+      transform: rotate(12deg);
+      border-radius: 4px;
+      background: rgba(255, 240, 240, 0.85);
+      letter-spacing: 0.5px;
+      pointer-events: none;
+    }
+
+    /* Corner Giant Rubber Stamp */
+    .corner-rubber-stamp {
+      position: absolute;
+      top: -18px;
+      right: -16px;
+      width: 82px;
+      height: 82px;
+      border: 3.5px dashed var(--red);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: rgba(255, 250, 245, 0.94);
+      transform: rotate(14deg);
+      box-shadow: 2px 3px 0px rgba(0,0,0,0.18);
+      z-index: 10;
+    }
+
+    .stamp-inner-circle {
+      width: 72px;
+      height: 72px;
+      border: 1.5px solid var(--red);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .stamp-apk {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 14px;
+      line-height: 1;
+      color: var(--red);
+    }
+
+    .stamp-ver {
+      font-family: 'Space Mono', monospace;
+      font-size: 8px;
+      font-weight: 700;
+      color: var(--red);
+      margin-top: 1px;
+    }
+
+    .stamp-free {
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      font-weight: 900;
+      background: var(--red);
+      color: #FFF;
+      padding: 0 4px;
+      margin-top: 2px;
+      letter-spacing: 1px;
+    }
+
+    /* Laptop Stickers slapped on hero phone */
+    .sticker-real {
+      position: absolute;
+      bottom: 24px;
+      left: -12px;
+      background: var(--lime);
+      color: var(--ink);
+      border: 2.5px solid var(--ink);
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 13px;
+      padding: 2px 10px;
+      transform: rotate(-11deg);
+      box-shadow: 2px 2px 0px var(--ink);
+      border-radius: 3px;
+      z-index: 8;
+    }
+
+    .sticker-w {
+      position: absolute;
+      bottom: 6px;
+      right: 2px;
+      background: var(--blue);
+      color: #FFF;
+      border: 2.5px solid var(--ink);
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 13px;
+      padding: 2px 8px;
+      transform: rotate(8deg);
+      box-shadow: 2px 2px 0px var(--ink);
+      border-radius: 3px;
+      z-index: 8;
+    }
+
+    /* Primary Action Button (Download APK) */
+    .download-action-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      width: 100%;
+    }
+
+    .btn-download {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--lime);
+      color: var(--ink);
+      border: var(--border-ink);
+      box-shadow: var(--shadow-hard-lg);
+      padding: 16px 14px;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 18px;
+      text-transform: lowercase;
+      letter-spacing: -0.5px;
+      text-decoration: none;
+      cursor: pointer;
+      border-radius: 0px;
+      transition: transform 0.08s, box-shadow 0.08s;
+    }
+
+    .btn-download:active {
+      transform: translate(3px, 3px);
+      box-shadow: var(--shadow-pressed);
+    }
+
+    .apk-meta-sub {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: #555248;
+      text-align: center;
+      font-weight: 500;
+      letter-spacing: -0.2px;
+    }
+
+    /* Section Banner: "Only on Android" (Black ink bar) */
+    .section-label-bar {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--bg-surface);
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      align-self: flex-start;
+      margin-bottom: -10px;
+      box-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+    }
+
+    /* Zine Back Page Feature Cards Stack */
+    .feature-cards-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+    }
+
+    .feature-card {
+      background: #FFFFFF;
+      border: var(--border-ink);
+      box-shadow: var(--shadow-hard);
+      padding: 12px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      position: relative;
+    }
+
+    /* Zine style alternating tilt + faux masking tape */
+    .card-tilt-1 {
+      transform: rotate(-1.2deg);
+      background: #FCFBF7;
+    }
+    .card-tilt-2 {
+      transform: rotate(1deg);
+      background: #FDFDFB;
+    }
+    .card-tilt-3 {
+      transform: rotate(-0.8deg);
+      background: #FAF8F2;
+    }
+    .card-tilt-4 {
+      transform: rotate(1.4deg);
+      background: #FFFFFF;
+    }
+
+    /* Small decorative tape on card edges */
+    .card-tape {
+      position: absolute;
+      top: -7px;
+      right: 24px;
+      width: 38px;
+      height: 14px;
+      background: rgba(244, 231, 162, 0.85);
+      border: 1px dashed rgba(18,18,18,0.3);
+      transform: rotate(-3deg);
+    }
+
+    .doodle-icon-box {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border: 2px solid var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 2px 2px 0px var(--ink);
+    }
+
+    .doodle-icon-box.pink { background: #FFD4EA; }
+    .doodle-icon-box.lime { background: #E7FF85; }
+    .doodle-icon-box.yellow { background: #FFF480; }
+    .doodle-icon-box.cyan { background: #D0E8FF; }
+
+    .feature-body {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .feature-title {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 16px;
+      color: var(--ink);
+      line-height: 1.1;
+      text-transform: lowercase;
+    }
+
+    .feature-desc {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      line-height: 1.35;
+      color: #33312b;
+      font-weight: 500;
+    }
+
+    /* Coming Soon Sticky Note */
+    .coming-soon-sticky {
+      background: #FFFDF0;
+      border: 2.5px dashed var(--ink);
+      padding: 16px 14px;
+      transform: rotate(1deg);
+      position: relative;
+      margin-top: 4px;
+      box-shadow: 3px 3px 0px rgba(0,0,0,0.06);
+    }
+
+    .sticker-soon {
+      position: absolute;
+      top: -12px;
+      right: 12px;
+      background: var(--pink);
+      color: #FFFFFF;
+      border: 2.5px solid var(--ink);
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 13px;
+      padding: 2px 10px;
+      transform: rotate(6deg);
+      box-shadow: 2px 2px 0px var(--ink);
+      letter-spacing: 0.5px;
+    }
+
+    .coming-soon-heading {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .coming-soon-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .coming-soon-item {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: #2b2b2b;
+      line-height: 1.4;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .coming-soon-item::before {
+      content: "✦";
+      color: var(--blue);
+      font-size: 10px;
+      margin-top: 1px;
+    }
+
+    /* Install in 3 Steps Section */
+    .install-steps-section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .section-title-steps {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 20px;
+      color: var(--ink);
+      text-transform: lowercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .step-box {
+      background: #FFFFFF;
+      border: 2px solid var(--ink);
+      box-shadow: 3px 3px 0px var(--ink);
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .step-num-square {
+      width: 34px;
+      height: 34px;
+      min-width: 34px;
+      background: var(--lime);
+      border: 2px solid var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 15px;
+      color: var(--ink);
+      box-shadow: 1.5px 1.5px 0px var(--ink);
+    }
+
+    .step-text {
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.3;
+    }
+
+    .step-03-note {
+      font-family: 'Caveat', cursive;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--blue);
+      margin-left: 4px;
+      margin-top: -2px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* iPhone / Safari Calm Box */
+    .iphone-stay-box {
+      background: var(--bg-surface-deep);
+      border: var(--border-ink);
+      box-shadow: var(--shadow-hard);
+      padding: 16px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+    }
+
+    .iphone-stay-heading {
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 18px;
+      color: var(--ink);
+      text-transform: lowercase;
+    }
+
+    .iphone-stay-body {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      line-height: 1.45;
+      color: #38342a;
+      font-weight: 500;
+    }
+
+    .iphone-actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 4px;
+      flex-wrap: wrap;
+    }
+
+    .btn-paper-back {
+      background: #FFFFFF;
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      box-shadow: 2.5px 2.5px 0px var(--ink);
+      padding: 10px 14px;
+      font-family: 'Space Mono', monospace;
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-paper-back:active {
+      transform: translate(2px, 2px);
+      box-shadow: 1px 1px 0px var(--ink);
+    }
+
+    /* Fixed Bottom Tab Navigation Bar */
+    .tab-bar {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 390px;
+      height: 64px;
+      background: var(--bg-surface);
+      border-top: 3px solid var(--ink);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 50;
+      padding: 0 4px;
+    }
+
+    .tab-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      gap: 2px;
+      flex: 1;
+      height: 100%;
+    }
+
+    .tab-item.active {
+      background: rgba(198, 255, 0, 0.35);
+      border-left: 2px solid var(--ink);
+      border-right: 2px solid var(--ink);
+    }
+
+    /* Floating compose button */
+    .tab-compose {
+      width: 44px;
+      height: 44px;
+      background: var(--pink);
+      border: 2.5px solid var(--ink);
+      box-shadow: 2px 2px 0px var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 24px;
+      color: #FFF;
+      line-height: 1;
+      margin-top: -10px;
+      text-decoration: none;
+    }
+
+    .tab-compose:active {
+      transform: translate(1px, 1px);
+      box-shadow: 1px 1px 0px var(--ink);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="iphone-frame">
+    
+    <!-- Top App Bar -->
+    <header class="top-bar">
+      <div class="top-bar-brand">
+        <span class="status-dot"></span>
+        <span>JAAL // GET THE APP</span>
+      </div>
+      <div class="badge-pwa">WEB PWA · IPHONE</div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="page-content">
+      
+      <!-- Top Masking Tape Strip -->
+      <div class="tape-strip">
+        android only · for now
+      </div>
+
+      <!-- Headline -->
+      <div class="headline-block">
+        <h1 class="headline">
+          jaal hits<br>
+          different on<br>
+          <span class="lime-swipe">android.</span>
+        </h1>
+        <div class="hand-annotation">
+          <span>the web app is the lite version. this is the full net</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 4 C10 12 14 14 17 19"/>
+            <polyline points="11 19 17 19 18 13"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Hero Phone Cutout (Tilted with mini Feed, Rubber Stamp & Stickers) -->
+      <div class="hero-phone-wrap">
+        <div class="hero-phone">
+          <div class="phone-notch"></div>
+          
+          <!-- Mini screen preview inside the phone cutout -->
+          <div class="phone-screen-inner">
+            <div class="mini-feed-header">
+              <span>● P2P RADAR: 8 PEERS</span>
+              <span>BATTERY: 94%</span>
+            </div>
+
+            <!-- Mini Polaroid item -->
+            <div class="mini-polaroid">
+              <div class="mini-photo-halftone">
+                <span class="mini-photo-overlay-tag">@maya · 1 hop</span>
+              </div>
+              <div class="mini-caption">
+                night market zine swap // line 2
+              </div>
+            </div>
+
+            <!-- Red rubber postmark stamp -->
+            <div class="stamp-postmark">
+              3 HOPS · 2D
+            </div>
+          </div>
+
+          <!-- Stickers slapped on phone -->
+          <div class="sticker-real">REAL</div>
+          <div class="sticker-w">W</div>
+
+          <!-- Big Round Rubber Stamp overlapping corner -->
+          <div class="corner-rubber-stamp">
+            <div class="stamp-inner-circle">
+              <span class="stamp-apk">APK</span>
+              <span class="stamp-ver">v0.1</span>
+              <span class="stamp-free">FREE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Primary Action Button: Download APK -->
+      <div class="download-action-area">
+        <a href="https://jaal-0.1.0.apk" class="btn-download" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square">
+            <line x1="12" y1="3" x2="12" y2="17"></line>
+            <polyline points="6 11 12 17 18 11"></polyline>
+            <line x1="4" y1="21" x2="20" y2="21"></line>
+          </svg>
+          <span>⬇ download for android</span>
+        </a>
+        <div class="apk-meta-sub">
+          jaal-0.1.0.apk · android 7+ · not on play store yet
+        </div>
+      </div>
+
+      <!-- Section Label: "Only On Android" -->
+      <div class="section-label-bar">
+        only on android
+      </div>
+
+      <!-- Zine Back Page Feature Cards Stack -->
+      <div class="feature-cards-stack">
+        
+        <!-- Card 1: Carry Pouch -->
+        <div class="feature-card card-tilt-1">
+          <div class="card-tape"></div>
+          <div class="doodle-icon-box pink">
+            <!-- Envelope doodle with stamp -->
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="#121212" stroke-width="2">
+              <rect x="3" y="6" width="22" height="16" fill="#fff" stroke="#121212" stroke-width="2"/>
+              <path d="M3 6 L14 15 L25 6"/>
+              <rect x="18" y="8" width="5" height="5" fill="#D7263D"/>
+            </svg>
+          </div>
+          <div class="feature-body">
+            <div class="feature-title">carry pouch</div>
+            <div class="feature-desc">carry sealed letters for strangers. earn courier clout when they land.</div>
+          </div>
+        </div>
+
+        <!-- Card 2: Nearby Radar Wall -->
+        <div class="feature-card card-tilt-2">
+          <div class="doodle-icon-box lime">
+            <!-- Polaroid doodle with lime dot -->
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="#121212" stroke-width="2">
+              <rect x="4" y="3" width="20" height="22" fill="#fff" stroke="#121212" stroke-width="2"/>
+              <rect x="6" y="5" width="16" height="13" fill="#dddad1"/>
+              <circle cx="19" cy="8" r="2.5" fill="#C6FF00" stroke="#121212" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="feature-body">
+            <div class="feature-title">nearby radar wall</div>
+            <div class="feature-desc">see who's physically around you, pinned like polaroids.</div>
+          </div>
+        </div>
+
+        <!-- Card 3: Become a Moderator -->
+        <div class="feature-card card-tilt-3">
+          <div class="card-tape"></div>
+          <div class="doodle-icon-box yellow">
+            <!-- QR + stamps doodle -->
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="#121212" stroke-width="2">
+              <rect x="4" y="4" width="10" height="10" fill="#121212"/>
+              <rect x="6" y="6" width="6" height="6" fill="#fff"/>
+              <rect x="16" y="4" width="8" height="8" fill="#121212"/>
+              <circle cx="9" cy="20" r="3" fill="#D7263D"/>
+              <circle cx="17" cy="20" r="3" fill="#D7263D"/>
+              <circle cx="23" cy="16" r="3" fill="#D7263D"/>
+            </svg>
+          </div>
+          <div class="feature-body">
+            <div class="feature-title">become a moderator</div>
+            <div class="feature-desc">get vouched in by 3 mods, irl. keep your mesh clean.</div>
+          </div>
+        </div>
+
+        <!-- Card 4: Network Lab -->
+        <div class="feature-card card-tilt-4">
+          <div class="doodle-icon-box cyan">
+            <!-- Beaker with mesh node inside -->
+            <svg width="26" height="26" viewBox="0 0 28 28" fill="none" stroke="#121212" stroke-width="2">
+              <path d="M10 4 L18 4 M12 4 L12 10 L6 22 C5 24 6 25 8 25 L20 25 C22 25 23 24 22 22 L16 10 L16 4"/>
+              <circle cx="11" cy="18" r="2" fill="#3D5AFE"/>
+              <circle cx="17" cy="17" r="2" fill="#3D5AFE"/>
+              <line x1="11" y1="18" x2="17" y2="17" stroke="#3D5AFE" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="feature-body">
+            <div class="feature-title">network lab</div>
+            <div class="feature-desc">spin up a fake crowd and watch posts hop phone to phone.</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Coming Soon Sticky Note (Dashed border, no shadow, pink soon sticker) -->
+      <div class="coming-soon-sticky">
+        <div class="sticker-soon">SOON</div>
+        <div class="coming-soon-heading">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+          <span>under active development</span>
+        </div>
+        <ul class="coming-soon-list">
+          <li class="coming-soon-item">bluetooth + wi-fi direct mesh. no hotspot needed</li>
+          <li class="coming-soon-item">syncs in your pocket, even when the app's closed</li>
+          <li class="coming-soon-item">your android becomes a hub iphones can join</li>
+        </ul>
+      </div>
+
+      <!-- Install in 3 Steps -->
+      <div class="install-steps-section">
+        <div class="section-title-steps">
+          <span>install in 3 steps</span>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num-square">01</div>
+          <div class="step-text">tap download</div>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num-square">02</div>
+          <div class="step-text">allow "install unknown apps" for your browser</div>
+        </div>
+
+        <div class="step-box">
+          <div class="step-num-square">03</div>
+          <div class="step-text">open jaal → type your 24 words → same you</div>
+        </div>
+
+        <div class="step-03-note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12 h14 M12 5 l7 7 -7 7"/>
+          </svg>
+          <span>your posts + follows come with you ★</span>
+        </div>
+      </div>
+
+      <!-- Bottom: Calm iPhone Box -->
+      <div class="iphone-stay-box">
+        <div class="iphone-stay-heading">on an iphone? stay here.</div>
+        <div class="iphone-stay-body">
+          ios doesn't allow mesh apps outside the app store. the web app works offline: safari → share → add to home screen.
+        </div>
+        <div class="iphone-actions">
+          <a href="#/home" class="btn-paper-back">
+            <span>← back to the feed</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Ledger footnote -->
+      <div style="font-family: 'Space Mono', monospace; font-size: 10px; color: #777; text-align: center; margin-top: 6px;">
+        jaal v0.1 · p2p gossip protocol · zero cloud servers
+      </div>
+
+    </main>
+
+    <!-- Bottom Tab Navigation Bar (home · meet · + · letters · you) -->
+    <nav class="tab-bar">
+      <a href="#/home" class="tab-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span>home</span>
+      </a>
+
+      <a href="#/nearby" class="tab-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <circle cx="12" cy="12" r="9"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="12" cy="12" r="1"/>
+        </svg>
+        <span>meet</span>
+      </a>
+
+      <a href="#/new" class="tab-compose" aria-label="Compose New Post">
+        <span>+</span>
+      </a>
+
+      <a href="#/inbox" class="tab-item">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <rect x="3" y="5" width="18" height="14" rx="1"/>
+          <polyline points="3 7 12 13 21 7"/>
+        </svg>
+        <span>letters</span>
+      </a>
+
+      <a href="#/settings" class="tab-item active">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+        <span>you</span>
+      </a>
+    </nav>
+
+  </div>
+
+</body>
+</html>

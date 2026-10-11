@@ -21,6 +21,7 @@ export function Home({ node }: { node: JaalNode }) {
   return (
     <div class="page stack">
       <Top />
+      <a class="tape" href="#/app" style={{ alignSelf: 'flex-start', textDecoration: 'none' }}>⬇ the android app is out · see why →</a>
       <div class="box" style={{ background: '#ddd3b8', color: 'var(--ink)' }} onClick={() => go('/meet')}>
         <span class="tape">{peers.length ? `syncing… ${peers.length} nearby` : 'nobody linked · posts wait in your pocket'}</span>
         <div class="row wrap" style={{ marginTop: '12px', minHeight: '64px' }}>
@@ -348,6 +349,7 @@ export function Settings({ node }: { node: JaalNode }) {
       <div class="box stack">
         <h3 class="hl">about</h3>
         <p class="mono">jaal web · protocol v1 · works offline once installed (safari → share → add to home screen).</p>
+        <a class="btn small" href="#/app" style={{ textDecoration: 'none' }}>⬇ get the android app</a>
       </div>
     </div>
   );

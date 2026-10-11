@@ -9,6 +9,7 @@ import '../../design/zine.dart';
 import '../shared/people.dart';
 import '../shared/providers.dart';
 import '../shell/app_shell.dart';
+import 'update_section.dart';
 
 /// Settings (design 15): stacked zine sections.
 class SettingsScreen extends ConsumerWidget {
@@ -81,6 +82,7 @@ class SettingsScreen extends ConsumerWidget {
               onPressed: () => context.push(Routes.share),
             ),
           ]),
+          const _Section(title: 'updates', children: [UpdateSection()]),
           _Section(title: 'moderation', children: [
             ZineButton(
               small: true,

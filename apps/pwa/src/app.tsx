@@ -3,10 +3,12 @@ import { JaalNode, createIdentity, loadIdentity, openJaalDB } from './core/node'
 import type { JaalDB } from './core/db';
 import { go, toast, useHash } from './ui/hooks';
 import { Chat, Compose, Home, Letters, Meet, PostDetail, Profile, Settings } from './ui/screens';
+import { GetApp } from './ui/getapp';
 
 export function App() {
   const [db, setDb] = useState<JaalDB>();
   const [node, setNode] = useState<JaalNode | null>();
+  const route = useHash();
   useEffect(() => {
     openJaalDB().then(async (d) => {
       setDb(d);
@@ -15,6 +17,8 @@ export function App() {
       navigator.storage?.persist?.();
     });
   }, []);
+  // The download page needs no node: show it before (or without) one.
+  if (route === '/app' && !node) return <GetApp />;
   if (node === undefined || !db) return <div class="page"><span class="wordmark hl">jaal</span><p class="hand">waking up your node…</p></div>;
   if (node === null) return <Onboarding db={db} onReady={setNode} />;
   return <Shell node={node} />;
@@ -32,6 +36,7 @@ function Shell({ node }: { node: JaalNode }) {
       case 'letters': return <Letters node={node} />;
       case 'chat': return <Chat node={node} peer={arg} />;
       case 'meet': return <Meet node={node} />;
+      case 'app': return <GetApp />;
       default: return <Home node={node} />;
     }
   })();
@@ -80,6 +85,7 @@ function Onboarding({ db, onReady }: { db: JaalDB; onReady: (n: JaalNode) => voi
         <button class="btn block" onClick={() => setMode('create')}>⚡ make me a node</button>
         <button class="btn paper block" onClick={() => setMode('restore')}>i have a recovery phrase</button>
         <p class="mono xerox">tip: safari → share → add to home screen. then it works offline.</p>
+        <a class="mono" href="#/app">on android? get the full app →</a>
       </div>
     );
   if (mode === 'phrase')
