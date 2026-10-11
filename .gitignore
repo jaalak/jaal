@@ -33,3 +33,6 @@ dist/
 *.sqlite
 *.sqlite-journal
 docs/stitch/exports/**/*.zip
+
+# graphify knowledge graph output
+graphify-out/
